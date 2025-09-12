@@ -10,14 +10,16 @@ export const Contact: React.FC = () => {
     const { content } = useEdit();
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [errors, setErrors] = useState({ name: '', email: '', message: '' });
-    const [isSending, setIsSending] = useState(false);
-    const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
         if (value) {
             setErrors(prev => ({ ...prev, [name]: '' }));
+        }
+        if (formStatus === 'success' || formStatus === 'error') {
+            setFormStatus('idle');
         }
     };
 
@@ -45,13 +47,13 @@ export const Contact: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!validate()) return;
+        if (formStatus === 'sending' || !validate()) {
+            return;
+        }
 
-        setIsSending(true);
-        setFormStatus('idle');
+        setFormStatus('sending');
 
         try {
-            // This will call the Vercel Serverless Function you'll create
             const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
@@ -64,17 +66,13 @@ export const Contact: React.FC = () => {
                 setFormStatus('success');
                 setFormData({ name: '', email: '', message: '' });
             } else {
-                console.error('API returned an error');
                 setFormStatus('error');
             }
         } catch (error) {
-            console.error('An error occurred while sending the message:', error);
+            console.error('Contact form submission error:', error);
             setFormStatus('error');
-        } finally {
-            setIsSending(false);
         }
     };
-
 
     return (
         <Section id="contact" title={t.sectionTitles.contact}>
@@ -141,16 +139,22 @@ export const Contact: React.FC = () => {
                         <div className="text-center">
                             <button
                                 type="submit"
-                                disabled={isSending}
+                                disabled={formStatus === 'sending'}
                                 className="inline-flex items-center justify-center bg-l_accent dark:bg-accent text-white dark:text-primary font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <SendIcon className="w-5 h-5 mr-2" />
-                                {isSending ? t.contactForm.sendingButton : t.contactForm.sendButton}
+                                {formStatus !== 'sending' && <SendIcon className="w-5 h-5 mr-2" />}
+                                {formStatus === 'sending' ? t.contactForm.sendingButton : t.contactForm.sendButton}
                             </button>
                         </div>
                     </form>
-                    {formStatus === 'success' && <p className="text-green-500 text-center mt-4">{t.contactForm.successMessage}</p>}
-                    {formStatus === 'error' && <p className="text-red-500 text-center mt-4">{t.contactForm.errorMessage}</p>}
+                    <div className="text-center mt-4 h-6">
+                        {formStatus === 'success' && (
+                            <p className="text-green-400">{t.contactForm.successMessage}</p>
+                        )}
+                        {formStatus === 'error' && (
+                            <p className="text-red-500">{t.contactForm.errorMessage}</p>
+                        )}
+                    </div>
                 </div>
 
                 <div className="text-center mt-12">
