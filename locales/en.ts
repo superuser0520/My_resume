@@ -231,8 +231,28 @@ export const references = {
 };
 
 export const contact = {
-    intro: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out.",
+    intro: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out using the form below or through my other channels.",
     email: "Email Me"
+};
+
+export const contactForm = {
+    nameLabel: "Your Name",
+    namePlaceholder: "e.g., Jane Doe",
+    emailLabel: "Your Email",
+    emailPlaceholder: "e.g., jane.doe@example.com",
+    messageLabel: "Your Message",
+    messagePlaceholder: "Hi Soo, I'd like to connect regarding...",
+    sendButton: "Send Message",
+    sendingButton: "Sending...",
+    successMessage: "Thank you for your message! I'll get back to you soon.",
+    errorMessage: "Oops! Something went wrong. Please try again.",
+    altContact: "Or, reach me via my other channels:",
+    validation: {
+        nameRequired: "Name is required.",
+        emailRequired: "Email is required.",
+        emailInvalid: "Please enter a valid email address.",
+        messageRequired: "Message is required.",
+    }
 };
 
 export const game = {
@@ -262,6 +282,14 @@ export const projectModal = {
 export const dev = {
     profDev: "Professional Development",
     achieve: "Additional Achievements"
+};
+
+export const proficiencyLevels = {
+    expert: "Expert",
+    advanced: "Advanced",
+    proficient: "Proficient",
+    intermediate: "Intermediate",
+    beginner: "Beginner"
 };
 
 export const roleTypes = {

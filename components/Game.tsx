@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Section } from './Section';
 import { GearIcon, WrenchIcon, ChipIcon } from './GameIcons';
-import { Mail, Linkedin, Whatsapp } from './Icons';
+import { Mail, Linkedin } from './Icons';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const PADDLE_WIDTH = 100;
@@ -172,10 +172,6 @@ export const Game: React.FC = () => {
                                         <a href="https://linkedin.com/in/soolihjing/" target="_blank" rel="noopener noreferrer" className="flex items-center bg-l_primary dark:bg-primary py-2 px-4 rounded-lg text-l_light dark:text-light hover:text-l_accent dark:hover:text-accent hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
                                             <Linkedin className="w-5 h-5 mr-3" />
                                             LinkedIn
-                                        </a>
-                                        <a href="https://wa.me/6589208001" target="_blank" rel="noopener noreferrer" className="flex items-center bg-l_primary dark:bg-primary py-2 px-4 rounded-lg text-l_light dark:text-light hover:text-l_accent dark:hover:text-accent hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
-                                            <Whatsapp className="w-5 h-5 mr-3" />
-                                            WhatsApp
                                         </a>
                                     </div>
                                     <button

@@ -230,9 +230,30 @@ export const references = {
 };
 
 export const contact = {
-    intro: "我随时乐于讨论新项目、创意想法或成为宏伟愿景一部分的机会。欢迎随时与我联系。",
+    intro: "我随时乐于讨论新项目、创意想法或成为宏伟愿景一部分的机会。欢迎随时通过以下表格或我的其他渠道与我联系。",
     email: "发送邮件"
 };
+
+export const contactForm = {
+    nameLabel: "您的姓名",
+    namePlaceholder: "例如, 张三",
+    emailLabel: "您的电子邮件",
+    emailPlaceholder: "例如, zhang.san@example.com",
+    messageLabel: "您的留言",
+    messagePlaceholder: "您好，我想就...与您联系",
+    sendButton: "发送消息",
+    sendingButton: "发送中...",
+    successMessage: "感谢您的留言！我会尽快回复您。",
+    errorMessage: "哎呀！出了点问题。请重试。",
+    altContact: "或者，通过我的其他渠道联系我：",
+    validation: {
+        nameRequired: "姓名为必填项。",
+        emailRequired: "电子邮件为必填项。",
+        emailInvalid: "请输入有效的电子邮件地址。",
+        messageRequired: "留言为必填项。",
+    }
+};
+
 
 export const game = {
     challenge: "准备好休息一下了吗？",
@@ -261,6 +282,14 @@ export const projectModal = {
 export const dev = {
     profDev: "职业发展",
     achieve: "其他成就"
+};
+
+export const proficiencyLevels = {
+    expert: "专家",
+    advanced: "高级",
+    proficient: "熟练",
+    intermediate: "中级",
+    beginner: "初级"
 };
 
 export const roleTypes = {

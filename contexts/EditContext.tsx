@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useLanguage, Language } from './LanguageContext';
 import * as en from '../locales/en';
 import * as zh from '../locales/zh';
-import { produce } from 'https://esm.sh/immer@10.1.1';
+import { produce } from 'immer';
 
 const defaultContent = { en, zh };
 
