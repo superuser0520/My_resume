@@ -21,8 +21,9 @@ export default async function handler(request, response) {
     return response.status(500).json({ error: 'Server configuration error.' });
   }
 
-  // The email address to send the contact form submission to
-  const toEmail = 'SOOLIHJING@ICLOUD.COM';
+  // The email address to send the contact form submission to.
+  // Changed to lowercase to match the email registered with Resend.
+  const toEmail = 'soolihjing@icloud.com';
   
   // The 'from' address must be 'onboarding@resend.dev' for the free tier unless you have a custom domain verified with Resend.
   const fromEmail = 'Portfolio Form <onboarding@resend.dev>';
