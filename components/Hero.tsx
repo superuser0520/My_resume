@@ -24,13 +24,24 @@ export const Hero: React.FC = () => {
                     <p className="text-lg text-l_dark dark:text-dark mb-8 leading-relaxed">
                         <EditableText path="hero.subtitle" as="span">{content.hero.subtitle}</EditableText>
                     </p>
-                    <a 
-                        href="#experience" 
-                        onClick={handleViewWorkClick}
-                        className="inline-block bg-l_accent dark:bg-accent text-white dark:text-primary font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105"
-                    >
-                        <EditableText path="hero.button">{content.hero.button}</EditableText>
-                    </a>
+                    <div className="flex flex-wrap items-center gap-4">
+                        <a 
+                            href="#experience" 
+                            onClick={handleViewWorkClick}
+                            className="inline-block bg-l_accent dark:bg-accent text-white dark:text-primary font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105"
+                        >
+                            <EditableText path="hero.button">{content.hero.button}</EditableText>
+                        </a>
+                        <a 
+                            href="/Soo_Lih_Jing_Resume.pdf"
+                            download="Soo_Lih_Jing_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block border-2 border-l_accent dark:border-accent text-l_accent dark:text-accent font-bold py-3 px-8 rounded-md hover:bg-l_accent/10 dark:hover:bg-accent/10 transition-all duration-300 transform hover:scale-105"
+                        >
+                            <EditableText path="hero.resumeButton">{content.hero.resumeButton}</EditableText>
+                        </a>
+                    </div>
                 </div>
                 <div className="lg:col-span-2 flex justify-center lg:justify-end">
                     <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-l_accent/30 dark:border-accent/50">

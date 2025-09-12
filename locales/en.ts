@@ -15,7 +15,8 @@ export const navLinks = [
 export const hero = {
     title: "Innovating Solutions Through Precision Engineering & Automation",
     subtitle: "As a Mechanical Designer and Automation Engineer with a deep-rooted passion for mechanics cultivated since the age of 12, I thrive on transforming complex challenges into efficient, innovative solutions. My expertise spans research, project fabrication, and the implementation of advanced automation systems. I am driven by a continuous desire for knowledge and a commitment to pushing technological boundaries to achieve exceptional results. I believe that \"Success is not final; failure is not fatal,\" and I consistently embrace new challenges to elevate my capabilities and deliver impactful engineering solutions.",
-    button: "View My Work"
+    button: "View My Work",
+    resumeButton: "Download CV"
 };
 
 export const sectionTitles = {
