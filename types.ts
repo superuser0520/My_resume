@@ -1,8 +1,10 @@
 
+
 export interface Skill {
   name: string;
   level: number; // e.g., 9 for 9/10
   description: string;
+  tooltip?: string;
 }
 
 export interface Role {

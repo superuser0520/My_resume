@@ -32,13 +32,13 @@ export const sectionTitles = {
 };
 
 export const skillsData: Skill[] = [
-    { name: 'SolidWorks Modeling', level: 9, description: 'Proficient in advanced 3D modeling and assembly design for complex mechanical systems.' },
-    { name: 'AutoCAD Drawing', level: 8, description: 'Skilled in 2D technical drawing, drafting, and detailed design documentation.' },
-    { name: 'PLC Programming', level: 7, description: 'Experienced in developing and troubleshooting PLC logic for industrial automation, particularly with Mitsubishi PLCs.' },
-    { name: 'Microsoft Office', level: 9, description: 'Expert in using Microsoft Office Suite for data analysis, reporting, and project documentation.' },
-    { name: 'Project Management Skill', level: 9, description: 'Proven ability to manage projects from conceptualization to completion, including budgeting, scheduling, and team coordination.' },
-    { name: '6 Sigma Lean Manufacturing Skill', level: 9, description: 'Applied Lean Six Sigma principles to optimize manufacturing processes, reduce waste, and improve efficiency and quality.' },
-    { name: 'Vibe Coding', level: 8, description: 'Applied prompt engineering to develop tools and applications for engineering purposes, enhancing efficiency and problem-solving through AI-driven solutions.' }
+    { name: 'SolidWorks Modeling', level: 9, description: 'Proficient in advanced 3D modeling and assembly design for complex mechanical systems.', tooltip: 'Includes expertise in part modeling, large assembly management, weldments, sheet metal, and creating detailed manufacturing drawings with GD&T.' },
+    { name: 'AutoCAD Drawing', level: 8, description: 'Skilled in 2D technical drawing, drafting, and detailed design documentation.', tooltip: 'Experienced in creating P&ID diagrams, electrical schematics, and mechanical layouts according to industry standards like ANSI and ISO.' },
+    { name: 'PLC Programming', level: 7, description: 'Experienced in developing and troubleshooting PLC logic for industrial automation, particularly with Mitsubishi PLCs.', tooltip: 'Hands-on experience with ladder logic, function block diagrams, and structured text on platforms like Mitsubishi GX Works2/3 and Siemens TIA Portal.' },
+    { name: 'Microsoft Office', level: 9, description: 'Expert in using Microsoft Office Suite for data analysis, reporting, and project documentation.', tooltip: 'Advanced proficiency in Excel for data analysis (PivotTables, VLOOKUP), PowerPoint for presentations, and Word for technical documentation.' },
+    { name: 'Project Management Skill', level: 9, description: 'Proven ability to manage projects from conceptualization to completion, including budgeting, scheduling, and team coordination.', tooltip: 'Utilizing tools like Gantt charts, critical path analysis, and Agile methodologies to ensure projects are delivered on time and within budget.' },
+    { name: '6 Sigma Lean Manufacturing Skill', level: 9, description: 'Applied Lean Six Sigma principles to optimize manufacturing processes, reduce waste, and improve efficiency and quality.', tooltip: 'Certified Greenbelt with practical experience in DMAIC, value stream mapping, 5S, and Kaizen events to drive continuous improvement.' },
+    { name: 'Vibe Coding', level: 8, description: 'Applied prompt engineering to develop tools and applications for engineering purposes, enhancing efficiency and problem-solving through AI-driven solutions.', tooltip: 'Specializing in prompt engineering to leverage large language models (LLMs) for tasks like code generation, data analysis scripting, and automating documentation.' }
 ];
 
 export const experienceData: Experience[] = [

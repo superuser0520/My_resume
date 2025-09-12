@@ -11,7 +11,7 @@ interface SkillCardProps {
 export const SkillCard: React.FC<SkillCardProps> = ({ skill, path }) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
-  const { content } = useEdit();
+  const { content, isEditing } = useEdit();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,7 +54,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, path }) => {
   return (
     <div 
       ref={cardRef}
-      className="bg-l_secondary dark:bg-secondary p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      className="group relative bg-l_secondary dark:bg-secondary p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
     >
       <h3 className="text-xl font-bold text-l_light dark:text-light mb-2">
         <EditableText path={`${path}.name`}>{skill.name}</EditableText>
@@ -72,6 +72,20 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, path }) => {
       <p className="text-l_dark dark:text-dark">
         <EditableText path={`${path}.description`}>{skill.description}</EditableText>
       </p>
+
+      {skill.tooltip && (
+        <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-xs 
+                       bg-slate-900 text-white
+                       dark:bg-slate-100 dark:text-slate-900
+                       text-sm rounded-md shadow-lg p-3 z-20 
+                       transition-opacity duration-300
+                       ${isEditing ? 'opacity-100' : 'opacity-0 group-hover:opacity-100 pointer-events-none'}`}>
+            <EditableText path={`${path}.tooltip`}>{skill.tooltip}</EditableText>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 
+                        border-x-8 border-x-transparent 
+                        border-t-8 border-t-slate-900 dark:border-t-slate-100"></div>
+        </div>
+      )}
     </div>
   );
 };

@@ -32,13 +32,13 @@ export const sectionTitles = {
 };
 
 export const skillsData: Skill[] = [
-    { name: 'SolidWorks 建模', level: 9, description: '精通复杂机械系统的高级3D建模和装配设计。' },
-    { name: 'AutoCAD 制图', level: 8, description: '熟练掌握2D技术制图、草图绘制和详细设计文档。' },
-    { name: 'PLC 编程', level: 7, description: '在工业自动化PLC逻辑开发和故障排除方面经验丰富，尤其擅长三菱PLC。' },
-    { name: 'Microsoft Office', level: 9, description: '精通使用Microsoft Office套件进行数据分析、报告和项目文档编制。' },
-    { name: '项目管理技能', level: 9, description: '具备从概念到完成管理项目的成熟能力，包括预算、排程和团队协调。' },
-    { name: '六西格玛精益制造技能', level: 9, description: '应用精益六西格玛原则优化制造流程、减少浪费、提高效率和质量。' },
-    { name: 'Vibe 编程', level: 8, description: '应用提示工程为工程目的开发工具和应用程序，通过AI驱动的解决方案提高效率和解决问题的能力。' }
+    { name: 'SolidWorks 建模', level: 9, description: '精通复杂机械系统的高级3D建模和装配设计。', tooltip: '包括零件建模、大型装配管理、焊接件、钣金以及使用GD&T创建详细制造图纸的专业知识。' },
+    { name: 'AutoCAD 制图', level: 8, description: '熟练掌握2D技术制图、草图绘制和详细设计文档。', tooltip: '在根据ANSI和ISO等行业标准创建P&ID图、电气原理图和机械布局方面经验丰富。' },
+    { name: 'PLC 编程', level: 7, description: '在工业自动化PLC逻辑开发和故障排除方面经验丰富，尤其擅长三菱PLC。', tooltip: '在三菱GX Works2/3和西门子TIA Portal等平台上，具备梯形图、功能块图和结构化文本的实践经验。' },
+    { name: 'Microsoft Office', level: 9, description: '精通使用Microsoft Office套件进行数据分析、报告和项目文档编制。', tooltip: '精通Excel进行数据分析（数据透视表、VLOOKUP）、PowerPoint进行演示以及Word进行技术文档编写。' },
+    { name: '项目管理技能', level: 9, description: '具备从概念到完成管理项目的成熟能力，包括预算、排程和团队协调。', tooltip: '利用甘特图、关键路径分析和敏捷方法论等工具，确保项目按时、按预算交付。' },
+    { name: '六西格玛精益制造技能', level: 9, description: '应用精益六西格玛原则优化制造流程、减少浪费、提高效率和质量。', tooltip: '获得绿带认证，在DMAIC、价值流图、5S和改善活动方面有实践经验，以推动持续改进。' },
+    { name: 'Vibe 编程', level: 8, description: '应用提示工程为工程目的开发工具和应用程序，通过AI驱动的解决方案提高效率和解决问题的能力。', tooltip: '专注于提示工程，利用大型语言模型（LLM）执行代码生成、数据分析脚本和自动化文档等任务。' }
 ];
 
 export const experienceData: Experience[] = [
