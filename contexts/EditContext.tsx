@@ -22,22 +22,25 @@ const PASSWORD = 'Soo980520@';
 
 export const EditProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [storedContent, setStoredContent] = useState<typeof defaultContent | null>(null);
-  const { lang, t } = useLanguage();
+  // Initialize state with defaultContent to prevent null state and white screen
+  const [storedContent, setStoredContent] = useState<typeof defaultContent>(defaultContent);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     try {
       const item = window.localStorage.getItem('portfolioContent');
-      const parsedItem = item ? JSON.parse(item) : defaultContent;
-      // Deep merge with default to ensure new fields are present
-      const merged = {
-        en: { ...defaultContent.en, ...parsedItem.en },
-        zh: { ...defaultContent.zh, ...parsedItem.zh },
-      };
-      setStoredContent(merged);
+      // If content exists in localStorage, parse and merge it with the default
+      if (item) {
+        const parsedItem = JSON.parse(item);
+        const merged = {
+          en: { ...defaultContent.en, ...parsedItem.en },
+          zh: { ...defaultContent.zh, ...parsedItem.zh },
+        };
+        setStoredContent(merged);
+      }
     } catch (error) {
       console.error("Failed to load content from localStorage", error);
-      setStoredContent(defaultContent);
+      // If there's an error, the state remains as defaultContent, which is safe.
     }
   }, []);
 
@@ -54,8 +57,6 @@ export const EditProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const updateContent = (path: string, value: any) => {
-    if (!storedContent) return;
-
     const newContent = produce(storedContent, draft => {
         const keys = path.split('.');
         let current: any = draft[lang];
@@ -69,11 +70,8 @@ export const EditProvider: React.FC<{ children: React.ReactNode }> = ({ children
     window.localStorage.setItem('portfolioContent', JSON.stringify(newContent));
   };
   
-  const content = storedContent ? storedContent[lang] : t;
-  
-  if (!storedContent) {
-    return null; // or a loading spinner
-  }
+  // Content is now guaranteed to exist.
+  const content = storedContent[lang];
 
   return (
     <EditContext.Provider value={{ isEditing, content, login, logout, updateContent }}>
