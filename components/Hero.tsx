@@ -1,8 +1,11 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useEdit } from '../contexts/EditContext';
+import { EditableText, EditableImage } from './Editable';
 
 export const Hero: React.FC = () => {
     const { t } = useLanguage();
+    const { content } = useEdit();
 
     const handleViewWorkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
@@ -16,17 +19,17 @@ export const Hero: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
                 <div className="lg:col-span-3">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-l_light dark:text-light mb-4 leading-tight">
-                        {t.hero.title}
+                        <EditableText path="hero.title" as="span">{content.hero.title}</EditableText>
                     </h1>
                     <p className="text-lg text-l_dark dark:text-dark mb-8 leading-relaxed">
-                        {t.hero.subtitle}
+                        <EditableText path="hero.subtitle" as="span">{content.hero.subtitle}</EditableText>
                     </p>
                     <a 
                         href="#experience" 
                         onClick={handleViewWorkClick}
                         className="inline-block bg-l_accent dark:bg-accent text-white dark:text-primary font-bold py-3 px-8 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105"
                     >
-                        {t.hero.button}
+                        <EditableText path="hero.button">{content.hero.button}</EditableText>
                     </a>
                 </div>
                 <div className="lg:col-span-2 flex justify-center lg:justify-end">

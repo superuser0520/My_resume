@@ -1,13 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import type { Skill } from '../types';
+import { useEdit } from '../contexts/EditContext';
+import { EditableText } from './Editable';
 
 interface SkillCardProps {
   skill: Skill;
+  path: string;
 }
 
-export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
+export const SkillCard: React.FC<SkillCardProps> = ({ skill, path }) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const { content } = useEdit();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,7 +47,9 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
       ref={cardRef}
       className="bg-l_secondary dark:bg-secondary p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
     >
-      <h3 className="text-xl font-bold text-l_light dark:text-light mb-3">{skill.name}</h3>
+      <h3 className="text-xl font-bold text-l_light dark:text-light mb-3">
+        <EditableText path={`${path}.name`}>{skill.name}</EditableText>
+      </h3>
       <div className="w-full bg-l_primary dark:bg-primary rounded-full h-2.5 mb-4 overflow-hidden">
         <div 
           className="bg-l_accent dark:bg-accent h-2.5 rounded-full transition-all duration-1000 ease-out" 
@@ -51,7 +57,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
         ></div>
       </div>
       <p className="text-l_dark dark:text-dark">
-        {skill.description}
+        <EditableText path={`${path}.description`}>{skill.description}</EditableText>
       </p>
     </div>
   );
