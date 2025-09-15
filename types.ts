@@ -30,6 +30,7 @@ export interface Project {
   process?: string;
   methodology?: string;
   technologies: string[];
+  // FIX: Added optional 'value' property to the Project interface to accommodate project value data and resolve type errors.
   value?: string;
 }
 

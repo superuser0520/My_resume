@@ -17,16 +17,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, path
       onClick={!isEditing ? onClick : undefined}
       className="group bg-l_secondary dark:bg-secondary rounded-lg shadow-lg hover:shadow-xl overflow-hidden cursor-pointer transition-all duration-300 transform hover:-translate-y-1 flex flex-col relative"
     >
-      {project.value && (
-        <div className="absolute top-3 right-3 bg-l_accent dark:bg-accent text-white dark:text-primary text-xs font-bold px-3 py-1 rounded-full z-10">
-            <EditableText path={`${path}.value`}>{project.value}</EditableText>
-        </div>
-      )}
-      <div className="overflow-hidden h-48">
-        <EditableImage path={`${path}.imageUrl`} alt={project.title} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      <div className="overflow-hidden h-48 bg-l_primary dark:bg-primary">
+        <EditableImage path={`${path}.imageUrl`} alt={project.title} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-l_light dark:text-light mb-2 truncate pr-20">
+        <h3 className="text-xl font-bold text-l_light dark:text-light mb-2 truncate">
             <EditableText path={`${path}.title`}>{project.title}</EditableText>
         </h3>
         <p className="text-sm text-l_dark dark:text-dark line-clamp-2 mb-4 flex-grow">

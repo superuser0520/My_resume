@@ -15,6 +15,9 @@ export const WorkProjects: React.FC<WorkProjectsProps> = ({ onProjectClick }) =>
 
     return (
         <Section id="work-projects" title={t.sectionTitles.workProjects}>
+            <p className="text-center text-sm italic text-l_dark dark:text-dark -mt-8 mb-12 max-w-2xl mx-auto">
+                {t.sectionTitles.workProjectsDisclaimer}
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {content.workProjectsData.map((project, index) => (
                     <ProjectCard 

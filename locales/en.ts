@@ -28,7 +28,8 @@ export const sectionTitles = {
     education: "Educational Background",
     references: "Professional Reference",
     contact: "Get In Touch",
-    game: "Recruiter's Arcade"
+    game: "Recruiter's Arcade",
+    workProjectsDisclaimer: "Disclaimer: All project images are for illustration purposes only due to company confidentiality."
 };
 
 export const skillsData: Skill[] = [
@@ -72,7 +73,7 @@ export const experienceData: Experience[] = [
                     'Executed mechanical design for both upstream and downstream conveyor and packaging line equipment.',
                     'Spearheaded proposal development for a large-scale automation project, securing SGD 3 million in funding with an 8.6-month ROI.',
                     'Developed system integration plans across ERP, WMS, RMS, and PLC systems for cohesive operation.',
-                    'Ensured safety compliance and planned for human-robot collaborative work environments.',
+                    'Ensured safety compliance and planned for a human-robot collaborative work environment.',
                     'Managed on-site deployment and continuous improvement initiatives for automated guided vehicles (AGVs).'
                 ],
                 type: 'Full-time',
@@ -118,50 +119,44 @@ export const experienceData: Experience[] = [
 export const workProjectsData: Project[] = [
     {
         title: 'End-to-End Logistic AMR Automation',
-        value: '3 mil SGD and above',
         concept: 'Engineered a fully automated, end-to-end logistics workflow using a fleet of Autonomous Mobile Robots (AMRs).',
         details: 'Integrated a fleet of AMRs with existing WMS and ERP systems, architecting a seamless communication network to maximize material transport efficiency from warehouse to production.',
-        imageUrl: 'https://picsum.photos/seed/logistics-amr/600/400',
+        imageUrl: 'https://rozitek.com/wp-content/uploads/2023/01/Intralogistic-Rozitek-robot-agv-amr-he-thong-AI.webp',
         technologies: ['AMR', 'WMS Integration', 'ERP Integration', 'System Architecture', 'SolidWorks']
     },
     {
         title: 'ASRS & AMR Wireless Integration',
-        value: '500k SGD and above',
         concept: 'Integrated an Automated Storage and Retrieval System (ASRS) with AMRs for fully autonomous pallet handling.',
         details: 'Automated pallet handling by establishing a robust Modbus TCP wireless link between ASRS and AMRs, eliminating all manual intervention in pallet stacking and unstacking processes.',
-        imageUrl: 'https://picsum.photos/seed/asrs/600/400',
+        imageUrl: 'https://i.imgur.com/odYCRsK.jpeg',
         technologies: ['ASRS', 'AMR', 'Modbus TCP', 'PLC', 'System Integration']
     },
     {
         title: 'Goods-to-Person (GTP) Picking System',
-        value: '1 mil SGD and above',
         concept: 'Implemented an integrated AMR system to create a "shelf-to-person" workflow, drastically minimizing operator travel time.',
         details: 'This GTP system directs AMRs to retrieve and transport entire shelving units to dedicated picking stations, significantly increasing order fulfillment speed and improving workplace ergonomics.',
-        imageUrl: 'https://picsum.photos/seed/gtp/600/400',
+        imageUrl: 'https://v8d2f4g2.delivery.rocketcdn.me/wp-content/uploads/2023/05/Geek.jpg',
         technologies: ['Goods-to-Person', 'AMR', 'WMS', 'Ergonomics', 'Logistics Optimization']
     },
     {
         title: 'Production Line AMR Integration',
-        value: '300k SGD and above',
         concept: 'Developed an automated production supply flow using AMRs integrated with PLC-controlled machinery.',
         details: 'This project focused on operational safety and efficiency, involving PLC programming for machine handshaking and implementing robust safety protocols for a collaborative human-robot work environment.',
-        imageUrl: 'https://picsum.photos/seed/production-amr/600/400',
+        imageUrl: 'https://i.imgur.com/aYgOICL.jpeg',
         technologies: ['AMR', 'PLC Programming', 'SolidWorks', 'Safety Systems', 'Machine Integration']
     },
     {
         title: 'Automated Wooden Pallet Stocker & Dispenser',
-        value: '150k SGD and above',
         concept: 'Designed and commissioned an automated system for dispensing and collecting wooden pallets to service supply chain needs.',
         details: 'This solution provides on-demand pallet availability, integrating wirelessly with the central AMR fleet management system via Modbus TCP to optimize workflow and reduce operational idle time.',
-        imageUrl: 'https://picsum.photos/seed/pallet-stocker/600/400',
+        imageUrl: 'https://i.imgur.com/F0fYqbl.jpeg',
         technologies: ['Automation', 'Robotics', 'SolidWorks', 'Modbus TCP', 'AMR Integration']
     },
     {
         title: 'Automated Pallet Wrapping System',
-        value: '100k SGD and above',
         concept: 'Developed an automated pallet wrapping station initiated and serviced entirely by AMRs.',
         details: 'The system enables an AMR to transport a loaded pallet to the wrapping machine and automatically initiate the cycle. Communication is handled wirelessly via Modbus TCP, creating a hands-free packaging step.',
-        imageUrl: 'https://picsum.photos/seed/wrapper/600/400',
+        imageUrl: 'https://i.imgur.com/T46V6Qv.jpeg',
         technologies: ['Pallet Wrapping', 'AMR', 'Modbus TCP', 'Automation', 'PLC']
     }
 ];
@@ -172,28 +167,28 @@ export const academicProjectsData: Project[] = [
         title: 'CAN CRUSHER BUILT FROM RECYCLED MATERIALS',
         concept: 'Designed and fabricated a can crusher to facilitate easier recycling of aluminum cans.',
         impact: 'Enhanced user convenience and promoted environmental sustainability by utilizing 100% recycled materials in its construction.',
-        imageUrl: 'https://picsum.photos/seed/cancrusher/600/400',
+        imageUrl: 'https://i.imgur.com/4GKF1ai.jpeg',
         technologies: ['SolidWorks', 'Mechanical Design', 'Recycling', 'Fabrication']
     },
     {
         title: 'PLASTIC SHREDDER',
         concept: 'Developed a plastic shredder aimed at reducing plastic waste volume.',
         impact: 'Significantly reduced the cost of plastic recycling by converting larger plastic items into smaller, granulate pieces.',
-        imageUrl: 'https://picsum.photos/seed/shredder/600/400',
+        imageUrl: 'https://i.imgur.com/HvQ6XL6.jpeg',
         technologies: ['Mechanical Design', 'SolidWorks', 'Waste Management']
     },
     {
         title: 'ECONOMIC TABLE SAW',
         concept: 'Designed and built a versatile woodworking table saw for home use.',
         impact: 'Successfully completed the project within a limited budget, aligning with sustainable development goals for tool accessibility and utility.',
-        imageUrl: 'https://picsum.photos/seed/tablesaw/600/400',
+        imageUrl: 'https://i.imgur.com/LilPdPA.jpeg',
         technologies: ['Woodworking', 'Mechanical Design', 'Fabrication']
     },
     {
         title: 'CAPSTONE: APPLE PEELING PRODUCTION LINE',
         concept: 'Conceptualized and designed an industrial-level apple peeling machine and an entire production line.',
         keyFeatures: ['Incorporated motion animation for failure forecasting.', 'Provided improvements to the apple processing product in the market.', 'Included manufacturing line animations for clarity and understanding.'],
-        imageUrl: 'https://picsum.photos/seed/appleline/600/400',
+        imageUrl: 'https://i.imgur.com/qaNv0Xw.png',
         technologies: ['SolidWorks', 'Motion Animation', 'Production Line Design', 'Python']
     },
     {
@@ -201,7 +196,7 @@ export const academicProjectsData: Project[] = [
         concept: 'Designed and fabricated a power-generating mechanism based on the principles of a forearm exercise machine.',
         process: 'Determined optimal dimensions for power generation, selected components for superior assembly, and investigated key parameters influencing power output.',
         methodology: 'Modeled the entire prototype using SOLIDWORKS software and fabricated a functional prototype for experimental validation.',
-        imageUrl: 'https://picsum.photos/seed/forearm/600/400',
+        imageUrl: 'https://i.imgur.com/V8v4Ayp.png',
         technologies: ['SolidWorks', 'Prototyping', 'Power Generation', 'Mechanical Design']
     }
 ];
@@ -209,7 +204,7 @@ export const academicProjectsData: Project[] = [
 export const developmentData: DevelopmentItem[] = [
     { category: 'Professional Development', item: 'Project Management Professional (PMP)' },
     { category: 'Professional Development', item: 'Applied Control Circuit Diagnostic Skill' },
-    { category: 'Professional Development', item: 'Greenbelt in Six Sigma (Certified by Shimano Master Black Belt)' },
+    { category: 'Professional Development', item: 'Black Belt in Six Sigma (Certified by Shimano Master Black Belt)' },
     { category: 'Professional Development', item: 'DraftSight Layout Planning' },
     { category: 'Professional Development', item: 'Performed PLC Programming' },
     { category: 'Professional Development', item: 'Yaskawa Industrial Robot Operating' },
@@ -221,9 +216,9 @@ export const developmentData: DevelopmentItem[] = [
 ];
 
 export const educationData: EducationItem[] = [
-    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
-    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDPtUNS1fvcWxQZbwJxYZOU1VrZEbdjTcvg&s" }
+    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
+    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://i.imgur.com/fz1P118.png" }
 ];
 
 export const references = {
@@ -257,7 +252,6 @@ export const contactForm = {
 };
 
 export const game = {
-    selectGame: "Select a Challenge",
     catchGame: {
         title: "Catch The Parts",
         description: "Show your reflexes! Catch the falling components to score points.",
@@ -265,14 +259,6 @@ export const game = {
         start: "Start Game",
         wonTitle: "Challenge Complete!",
         wonBody: "You've got great reflexes! I'd love to connect.",
-        playAgain: "Play Again",
-    },
-    snakeEaterGame: {
-        title: "Snake Eater",
-        description: "A classic engineering challenge! Guide the snake to eat the components without crashing.",
-        start: "Start Game",
-        gameOverTitle: "Game Over",
-        gameOverBody: "A valiant effort! Precision and planning are key. Ready for another round?",
         playAgain: "Play Again",
     },
     score: "Score",

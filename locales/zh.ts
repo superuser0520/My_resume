@@ -28,7 +28,8 @@ export const sectionTitles = {
     education: "教育背景",
     references: "专业推荐",
     contact: "联系我",
-    game: "招聘官游戏厅"
+    game: "招聘官游戏厅",
+    workProjectsDisclaimer: "免责声明：由于公司保密原因，所有项目图片仅供参考。"
 };
 
 export const skillsData: Skill[] = [
@@ -118,50 +119,44 @@ export const experienceData: Experience[] = [
 export const workProjectsData: Project[] = [
     {
         title: '端到端物流AMR自动化',
-        value: '300万新元以上',
         concept: '利用自主移动机器人（AMR）车队，设计了一个全自动的端到端物流工作流程。',
         details: '将AMR车队与现有的WMS和ERP系统集成，构建了一个无缝的通信网络，以最大化从仓库到生产的物料运输效率。',
-        imageUrl: 'https://picsum.photos/seed/logistics-amr/600/400',
+        imageUrl: 'https://rozitek.com/wp-content/uploads/2023/01/Intralogistic-Rozitek-robot-agv-amr-he-thong-AI.webp',
         technologies: ['AMR', 'WMS集成', 'ERP集成', '系统架构', 'SolidWorks']
     },
     {
         title: 'ASRS与AMR无线集成',
-        value: '50万新元以上',
         concept: '集成了自动存储与检索系统（ASRS）与AMR，以实现全自主托盘处理。',
         details: '通过在ASRS和AMR之间建立稳健的Modbus TCP无线链接，实现了托盘处理的自动化，消除了托盘堆叠和拆解过程中的所有人工干预。',
-        imageUrl: 'https://picsum.photos/seed/asrs/600/400',
+        imageUrl: 'https://i.imgur.com/odYCRsK.jpeg',
         technologies: ['ASRS', 'AMR', 'Modbus TCP', 'PLC', '系统集成']
     },
     {
         title: '货到人（GTP）拣选系统',
-        value: '100万新元以上',
         concept: '实施了一个集成的AMR系统，创建了“货架到人”的工作流程，极大地减少了操作员的行走时间。',
         details: '该GTP系统指挥AMR检索并将整个货架单元运输到专用的拣选站，显著提高了订单履行速度并改善了工作场所的人体工程学。',
-        imageUrl: 'https://picsum.photos/seed/gtp/600/400',
+        imageUrl: 'https://v8d2f4g2.delivery.rocketcdn.me/wp-content/uploads/2023/05/Geek.jpg',
         technologies: ['货到人', 'AMR', 'WMS', '人体工程学', '物流优化']
     },
     {
         title: '生产线AMR集成',
-        value: '30万新元以上',
         concept: '开发了一个使用AMR与PLC控制的机械集成的自动化生产供应流程。',
         details: '该项目重点关注操作安全和效率，涉及用于机器握手的PLC编程，并为协作式人机工作环境实施了强大的安全协议。',
-        imageUrl: 'https://picsum.photos/seed/production-amr/600/400',
+        imageUrl: 'https://i.imgur.com/aYgOICL.jpeg',
         technologies: ['AMR', 'PLC编程', 'SolidWorks', '安全系统', '机器集成']
     },
     {
         title: '自动化木制托盘堆叠与分配器',
-        value: '15万新元以上',
         concept: '设计并调试了一套用于分配和收集木制托盘的自动化系统，以满足供应链需求。',
         details: '该解决方案提供按需托盘，通过Modbus TCP与中央AMR车队管理系统无线集成，以优化工作流程并减少操作空闲时间。',
-        imageUrl: 'https://picsum.photos/seed/pallet-stocker/600/400',
+        imageUrl: 'https://i.imgur.com/F0fYqbl.jpeg',
         technologies: ['自动化', '机器人技术', 'SolidWorks', 'Modbus TCP', 'AMR集成']
     },
     {
         title: '自动化托盘缠绕系统',
-        value: '10万新元以上',
         concept: '开发了一个完全由AMR启动和服务的自动化托盘缠绕站。',
         details: '该系统使AMR能够将装载好的托盘运输到缠绕机并自动启动缠绕周期。通信通过Modbus TCP无线处理，创建了一个无需人工操作的包装步骤。',
-        imageUrl: 'https://picsum.photos/seed/wrapper/600/400',
+        imageUrl: 'https://i.imgur.com/T46V6Qv.jpeg',
         technologies: ['托盘缠绕', 'AMR', 'Modbus TCP', '自动化', 'PLC']
     }
 ];
@@ -171,28 +166,28 @@ export const academicProjectsData: Project[] = [
         title: '用回收材料制作的易拉罐压扁器',
         concept: '设计并制造了一个易拉罐压扁器，以方便铝罐的回收。',
         impact: '通过100%使用回收材料建造，提升了用户便利性并促进了环境可持续性。',
-        imageUrl: 'https://picsum.photos/seed/cancrusher/600/400',
+        imageUrl: 'https://i.imgur.com/4GKF1ai.jpeg',
         technologies: ['SolidWorks', '机械设计', '回收利用', '制造']
     },
     {
         title: '塑料粉碎机',
         concept: '开发了一台旨在减少塑料废物体積的塑料粉碎机。',
         impact: '通过将较大的塑料物品转化为较小的颗粒状碎片，显著降低了塑料回收的成本。',
-        imageUrl: 'https://picsum.photos/seed/shredder/600/400',
+        imageUrl: 'https://i.imgur.com/HvQ6XL6.jpeg',
         technologies: ['机械设计', 'SolidWorks', '废物管理']
     },
     {
         title: '经济型台锯',
         concept: '设计并制造了一台多功能家用木工台锯。',
         impact: '在有限的预算内成功完成了项目，符合工具可及性和实用性的可持续发展目标。',
-        imageUrl: 'https://picsum.photos/seed/tablesaw/600/400',
+        imageUrl: 'https://i.imgur.com/LilPdPA.jpeg',
         technologies: ['木工', '机械设计', '制造']
     },
     {
         title: '毕业设计：苹果削皮生产线',
         concept: '构思并设计了一台工业级苹果削皮机及整条生产线。',
         keyFeatures: ['集成了用于故障预测的运动动画。', '对市场上的苹果加工产品提出了改进。', '为清晰理解，包含了生产线动画。'],
-        imageUrl: 'https://picsum.photos/seed/appleline/600/400',
+        imageUrl: 'https://i.imgur.com/qaNv0Xw.png',
         technologies: ['SolidWorks', '运动动画', '生产线设计', 'Python']
     },
     {
@@ -200,7 +195,7 @@ export const academicProjectsData: Project[] = [
         concept: '基于前臂锻炼机的原理，设计并制造了一种发电装置。',
         process: '确定了发电的最佳尺寸，选择了优质组件进行组装，并研究了影响功率输出的关键参数。',
         methodology: '使用SOLIDWORKS软件对整个原型进行建模，并制造了一个功能性原型进行实验验证。',
-        imageUrl: 'https://picsum.photos/seed/forearm/600/400',
+        imageUrl: 'https://i.imgur.com/V8v4Ayp.png',
         technologies: ['SolidWorks', '原型制作', '发电', '机械设计']
     }
 ];
@@ -208,7 +203,7 @@ export const academicProjectsData: Project[] = [
 export const developmentData: DevelopmentItem[] = [
     { category: 'Professional Development', item: '项目管理专业人士 (PMP)' },
     { category: 'Professional Development', item: '应用控制电路诊断技能' },
-    { category: 'Professional Development', item: '六西格玛绿带 (由Shimano黑带大师认证)' },
+    { category: 'Professional Development', item: '六西格玛黑带 (由Shimano黑带大师认证)' },
     { category: 'Professional Development', item: 'DraftSight 布局规划' },
     { category: 'Professional Development', item: '执行PLC编程' },
     { category: 'Professional Development', item: '安川工业机器人操作' },
@@ -220,9 +215,9 @@ export const developmentData: DevelopmentItem[] = [
 ];
 
 export const educationData: EducationItem[] = [
-    { degree: "机械工程学士学位", institution: "UCSI大学", period: "2017-2021", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
-    { degree: "理科预科", institution: "UCSI大学", period: "2016-2017", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDPtUNS1fvcWxQZbwJxYZOU1VrZEbdjTcvg&s" }
+    { degree: "机械工程学士学位", institution: "UCSI大学", period: "2017-2021", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
+    { degree: "理科预科", institution: "UCSI大学", period: "2016-2017", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://i.imgur.com/fz1P118.png" }
 ];
 
 export const references = {
@@ -256,7 +251,6 @@ export const contactForm = {
 };
 
 export const game = {
-    selectGame: "选择一个挑战",
     catchGame: {
         title: "接住零件",
         description: "展示你的反应能力！接住掉落的零件来得分。",
@@ -264,14 +258,6 @@ export const game = {
         start: "开始游戏",
         wonTitle: "挑战完成！",
         wonBody: "你的反应真棒！希望能与您建立联系。",
-        playAgain: "再玩一次",
-    },
-    snakeEaterGame: {
-        title: "贪吃蛇",
-        description: "一个经典的工程挑战！引导蛇吃掉零件，但不要撞到自己或墙壁。",
-        start: "开始游戏",
-        gameOverTitle: "游戏结束",
-        gameOverBody: "一次勇敢的尝试！精准和规划是关键。准备好再来一局吗？",
         playAgain: "再玩一次",
     },
     score: "分数",

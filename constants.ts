@@ -116,28 +116,28 @@ export const academicProjectsData: Project[] = [
         title: 'CAN CRUSHER BUILT FROM RECYCLED MATERIALS',
         concept: 'Designed and fabricated a can crusher to facilitate easier recycling of aluminum cans.',
         impact: 'Enhanced user convenience and promoted environmental sustainability by utilizing 100% recycled materials in its construction.',
-        imageUrl: 'https://picsum.photos/seed/cancrusher/600/400',
+        imageUrl: 'https://i.imgur.com/4GKF1ai.jpeg',
         technologies: ['SolidWorks', 'Mechanical Design', 'Recycling', 'Fabrication']
     },
     {
         title: 'PLASTIC SHREDDER',
         concept: 'Developed a plastic shredder aimed at reducing plastic waste volume.',
         impact: 'Significantly reduced the cost of plastic recycling by converting larger plastic items into smaller, granulate pieces.',
-        imageUrl: 'https://picsum.photos/seed/shredder/600/400',
+        imageUrl: 'https://i.imgur.com/HvQ6XL6.jpeg',
         technologies: ['Mechanical Design', 'SolidWorks', 'Waste Management']
     },
     {
         title: 'ECONOMIC TABLE SAW',
         concept: 'Designed and built a versatile woodworking table saw for home use.',
         impact: 'Successfully completed the project within a limited budget, aligning with sustainable development goals for tool accessibility and utility.',
-        imageUrl: 'https://picsum.photos/seed/tablesaw/600/400',
+        imageUrl: 'https://i.imgur.com/u6g5F2k.jpeg',
         technologies: ['Woodworking', 'Mechanical Design', 'Fabrication']
     },
     {
         title: 'CAPSTONE: APPLE PEELING PRODUCTION LINE',
         concept: 'Conceptualized and designed an industrial-level apple peeling machine and an entire production line.',
         keyFeatures: ['Incorporated motion animation for failure forecasting.', 'Provided improvements to the apple processing product in the market.', 'Included manufacturing line animations for clarity and understanding.'],
-        imageUrl: 'https://picsum.photos/seed/appleline/600/400',
+        imageUrl: 'https://i.imgur.com/qaNv0Xw.png',
         technologies: ['SolidWorks', 'Motion Animation', 'Production Line Design', 'Python']
     },
     {
@@ -145,7 +145,7 @@ export const academicProjectsData: Project[] = [
         concept: 'Designed and fabricated a power-generating mechanism based on the principles of a forearm exercise machine.',
         process: 'Determined optimal dimensions for power generation, selected components for superior assembly, and investigated key parameters influencing power output.',
         methodology: 'Modeled the entire prototype using SOLIDWORKS software and fabricated a functional prototype for experimental validation.',
-        imageUrl: 'https://picsum.photos/seed/forearm/600/400',
+        imageUrl: 'https://i.imgur.com/V8v4Ayp.png',
         technologies: ['SolidWorks', 'Prototyping', 'Power Generation', 'Mechanical Design']
     }
 ];
@@ -166,9 +166,9 @@ export const developmentData: DevelopmentItem[] = [
 
 // FIX: Added 'imageUrl' property to each object to satisfy the EducationItem type.
 export const educationData: EducationItem[] = [
-    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", details: "CGPA: 3.48", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
-    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", details: "CGPA: 3.64", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", details: "Result: 5A 2A-3B+", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDPtUNS1fvcWxQZbwJxYZOU1VrZEbdjTcvg&s" }
+    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", details: "CGPA: 3.48", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
+    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", details: "CGPA: 3.64", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", details: "Result: 5A 2A-3B+", imageUrl: "https://i.imgur.com/fz1P118.png" }
 ];
 
 export const navLinks = [

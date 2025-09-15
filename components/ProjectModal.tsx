@@ -21,7 +21,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <button onClick={onClose} className="absolute top-4 right-4 text-l_dark dark:text-dark hover:text-l_accent dark:hover:text-accent transition-colors">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
-                <img src={project.imageUrl} alt={project.title} className="w-full h-64 object-cover rounded-md mb-6" />
+                <div className="w-full h-64 bg-l_primary dark:bg-primary rounded-md mb-6 flex items-center justify-center overflow-hidden">
+                    <img src={project.imageUrl} alt={project.title} className="max-w-full max-h-full object-contain" />
+                </div>
                 <h2 className="text-3xl font-bold text-l_accent dark:text-accent mb-4">{project.title}</h2>
                 
                 <div className="mb-6">

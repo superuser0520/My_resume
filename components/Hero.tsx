@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
                 <div className="lg:col-span-2 flex justify-center lg:justify-end">
                     <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-l_accent/30 dark:border-accent/50">
                         <img 
-                            src="https://picsum.photos/seed/portrait/400/400" 
+                            src="https://i.imgur.com/H8aSAiq.jpeg" 
                             alt="Soo Lih Jing" 
                             className="w-full h-full object-cover"
                         />
