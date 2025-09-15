@@ -2,33 +2,26 @@ import React from 'react';
 import { Section } from './Section';
 import { Certificate, Star } from './Icons';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useEdit } from '../contexts/EditContext';
-import { EditableText } from './Editable';
 
 export const Development: React.FC = () => {
   const { t } = useLanguage();
-  const { content } = useEdit();
   
-  const professionalDev = content.developmentData.filter(d => d.category === 'Professional Development');
-  const achievements = content.developmentData.filter(d => d.category === 'Additional Achievement');
-
-  const findOriginalIndex = (item: string) => {
-    return content.developmentData.findIndex(d => d.item === item);
-  }
+  const professionalDev = t.developmentData.filter(d => d.category === 'Professional Development');
+  const achievements = t.developmentData.filter(d => d.category === 'Additional Achievement');
 
   return (
     <Section id="development" title={t.sectionTitles.development}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
           <h3 className="text-2xl font-bold text-l_accent dark:text-accent mb-6">
-            <EditableText path="dev.profDev">{t.dev.profDev}</EditableText>
+            {t.dev.profDev}
           </h3>
           <ul className="space-y-4">
             {professionalDev.map((item, index) => (
               <li key={index} className="flex items-start">
                 <Certificate className="w-5 h-5 text-l_accent dark:text-accent mr-3 mt-1 flex-shrink-0" />
                 <span className="text-l_light dark:text-light">
-                  <EditableText path={`developmentData.${findOriginalIndex(item.item)}.item`}>{item.item}</EditableText>
+                  {item.item}
                 </span>
               </li>
             ))}
@@ -36,14 +29,14 @@ export const Development: React.FC = () => {
         </div>
         <div>
           <h3 className="text-2xl font-bold text-l_accent dark:text-accent mb-6">
-            <EditableText path="dev.achieve">{t.dev.achieve}</EditableText>
+            {t.dev.achieve}
           </h3>
           <ul className="space-y-4">
             {achievements.map((item, index) => (
               <li key={index} className="flex items-start">
                 <Star className="w-5 h-5 text-l_accent dark:text-accent mr-3 mt-1 flex-shrink-0" />
                 <span className="text-l_light dark:text-light">
-                  <EditableText path={`developmentData.${findOriginalIndex(item.item)}.item`}>{item.item}</EditableText>
+                  {item.item}
                 </span>
               </li>
             ))}

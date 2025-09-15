@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { Section } from './Section';
 import { Mail, Linkedin, SendIcon, FileIcon } from './Icons';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useEdit } from '../contexts/EditContext';
-import { EditableText } from './Editable';
 
 export const Contact: React.FC = () => {
     const { t } = useLanguage();
-    const { content } = useEdit();
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [errors, setErrors] = useState({ name: '', email: '', message: '' });
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -125,7 +122,7 @@ export const Contact: React.FC = () => {
         <Section id="contact" title={t.sectionTitles.contact}>
             <div className="max-w-3xl mx-auto">
                 <p className="text-lg text-center text-l_dark dark:text-dark mb-12">
-                    <EditableText path="contact.intro">{content.contact.intro}</EditableText>
+                    {t.contact.intro}
                 </p>
                 
                 <div className="bg-l_secondary dark:bg-secondary p-8 rounded-lg shadow-lg">
@@ -240,7 +237,7 @@ export const Contact: React.FC = () => {
                     <div className="flex flex-wrap justify-center gap-6 mb-8">
                         <a href="mailto:SOOLIHJING@ICLOUD.COM" className="flex items-center bg-l_secondary dark:bg-secondary py-3 px-6 rounded-lg text-l_light dark:text-light hover:text-l_accent dark:hover:text-accent hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
                             <Mail className="w-5 h-5 mr-3" />
-                            <EditableText path="contact.email">{content.contact.email}</EditableText>
+                            {t.contact.email}
                         </a>
                         <a href="https://linkedin.com/in/soolihjing/" target="_blank" rel="noopener noreferrer" className="flex items-center bg-l_secondary dark:bg-secondary py-3 px-6 rounded-lg text-l_light dark:text-light hover:text-l_accent dark:hover:text-accent hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
                             <Linkedin className="w-5 h-5 mr-3" />

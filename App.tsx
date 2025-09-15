@@ -12,7 +12,6 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
 import { Game } from './components/Game';
-import { Settings } from './components/Settings';
 import type { Project } from './types';
 import { useLanguage } from './contexts/LanguageContext';
 
@@ -85,7 +84,6 @@ const App: React.FC = () => {
             {isModalOpen && selectedProject && (
                 <ProjectModal project={selectedProject} onClose={closeModal} />
             )}
-            <Settings />
         </div>
     );
 };

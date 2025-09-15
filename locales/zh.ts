@@ -45,7 +45,7 @@ export const skillsData: Skill[] = [
 export const experienceData: Experience[] = [
     {
         company: 'SHIMANO SINGAPORE PTE LTD',
-        logoUrl: 'https://1000logos.net/wp-content/uploads/2020/09/Shimano-Logo.jpg',
+        logoUrl: 'https://1000logos.net/wp-content/uploads/2020/09/Shimano-Logo.jpg?v=1.1',
         roles: [
             {
                 title: '高级工程师',
@@ -82,7 +82,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: 'ARMSTRONG SDN BHD',
-        logoUrl: 'https://media.licdn.com/dms/image/v2/C4D0BAQH75S6hkgK_mg/company-logo_200_200/company-logo_200_200/0/1631343921130?e=2147483647&v=beta&t=wOGNmI8EYs-h87Y12DFyvXbLSz5pRHK4QJPCknB6WGc',
+        logoUrl: 'https://media.licdn.com/dms/image/v2/C4D0BAQH75S6hkgK_mg/company-logo_200_200/company-logo_200_200/0/1631343921130?e=2147483647&v=beta&t=wOGNmI8EYs-h87Y12DFyvXbLSz5pRHK4QJPCknB6WGc&v=1.1',
         roles: [
             {
                 title: '工艺工程师',
@@ -98,7 +98,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: 'HERSHEY MALAYSIA SDN BHD',
-        logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0R3docEDPinwIXeJ9BPauQM0TlR0A6_3F6w&s',
+        logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0R3docEDPinwIXeJ9BPauQM0TlR0A6_3F6w&s?v=1.1',
         roles: [
             {
                 title: '生产工程师实习生',
@@ -121,42 +121,42 @@ export const workProjectsData: Project[] = [
         title: '端到端物流AMR自动化',
         concept: '利用自主移动机器人（AMR）车队，设计了一个全自动的端到端物流工作流程。',
         details: '将AMR车队与现有的WMS和ERP系统集成，构建了一个无缝的通信网络，以最大化从仓库到生产的物料运输效率。',
-        imageUrl: 'https://rozitek.com/wp-content/uploads/2023/01/Intralogistic-Rozitek-robot-agv-amr-he-thong-AI.webp',
+        imageUrl: 'https://rozitek.com/wp-content/uploads/2023/01/Intralogistic-Rozitek-robot-agv-amr-he-thong-AI.webp?v=1.1',
         technologies: ['AMR', 'WMS集成', 'ERP集成', '系统架构', 'SolidWorks']
     },
     {
         title: 'ASRS与AMR无线集成',
         concept: '集成了自动存储与检索系统（ASRS）与AMR，以实现全自主托盘处理。',
         details: '通过在ASRS和AMR之间建立稳健的Modbus TCP无线链接，实现了托盘处理的自动化，消除了托盘堆叠和拆解过程中的所有人工干预。',
-        imageUrl: 'https://i.imgur.com/odYCRsK.jpeg',
+        imageUrl: 'https://i.imgur.com/odYCRsK.jpeg?v=1.1',
         technologies: ['ASRS', 'AMR', 'Modbus TCP', 'PLC', '系统集成']
     },
     {
         title: '货到人（GTP）拣选系统',
         concept: '实施了一个集成的AMR系统，创建了“货架到人”的工作流程，极大地减少了操作员的行走时间。',
         details: '该GTP系统指挥AMR检索并将整个货架单元运输到专用的拣选站，显著提高了订单履行速度并改善了工作场所的人体工程学。',
-        imageUrl: 'https://v8d2f4g2.delivery.rocketcdn.me/wp-content/uploads/2023/05/Geek.jpg',
+        imageUrl: 'https://v8d2f4g2.delivery.rocketcdn.me/wp-content/uploads/2023/05/Geek.jpg?v=1.1',
         technologies: ['货到人', 'AMR', 'WMS', '人体工程学', '物流优化']
     },
     {
         title: '生产线AMR集成',
         concept: '开发了一个使用AMR与PLC控制的机械集成的自动化生产供应流程。',
         details: '该项目重点关注操作安全和效率，涉及用于机器握手的PLC编程，并为协作式人机工作环境实施了强大的安全协议。',
-        imageUrl: 'https://i.imgur.com/aYgOICL.jpeg',
+        imageUrl: 'https://i.imgur.com/aYgOICL.jpeg?v=1.1',
         technologies: ['AMR', 'PLC编程', 'SolidWorks', '安全系统', '机器集成']
     },
     {
         title: '自动化木制托盘堆叠与分配器',
         concept: '设计并调试了一套用于分配和收集木制托盘的自动化系统，以满足供应链需求。',
         details: '该解决方案提供按需托盘，通过Modbus TCP与中央AMR车队管理系统无线集成，以优化工作流程并减少操作空闲时间。',
-        imageUrl: 'https://i.imgur.com/F0fYqbl.jpeg',
+        imageUrl: 'https://i.imgur.com/F0fYqbl.jpeg?v=1.1',
         technologies: ['自动化', '机器人技术', 'SolidWorks', 'Modbus TCP', 'AMR集成']
     },
     {
         title: '自动化托盘缠绕系统',
         concept: '开发了一个完全由AMR启动和服务的自动化托盘缠绕站。',
         details: '该系统使AMR能够将装载好的托盘运输到缠绕机并自动启动缠绕周期。通信通过Modbus TCP无线处理，创建了一个无需人工操作的包装步骤。',
-        imageUrl: 'https://i.imgur.com/T46V6Qv.jpeg',
+        imageUrl: 'https://i.imgur.com/T46V6Qv.jpeg?v=1.1',
         technologies: ['托盘缠绕', 'AMR', 'Modbus TCP', '自动化', 'PLC']
     }
 ];
@@ -166,28 +166,28 @@ export const academicProjectsData: Project[] = [
         title: '用回收材料制作的易拉罐压扁器',
         concept: '设计并制造了一个易拉罐压扁器，以方便铝罐的回收。',
         impact: '通过100%使用回收材料建造，提升了用户便利性并促进了环境可持续性。',
-        imageUrl: 'https://i.imgur.com/4GKF1ai.jpeg',
+        imageUrl: 'https://i.imgur.com/4GKF1ai.jpeg?v=1.1',
         technologies: ['SolidWorks', '机械设计', '回收利用', '制造']
     },
     {
         title: '塑料粉碎机',
         concept: '开发了一台旨在减少塑料废物体積的塑料粉碎机。',
         impact: '通过将较大的塑料物品转化为较小的颗粒状碎片，显著降低了塑料回收的成本。',
-        imageUrl: 'https://i.imgur.com/HvQ6XL6.jpeg',
+        imageUrl: 'https://i.imgur.com/HvQ6XL6.jpeg?v=1.1',
         technologies: ['机械设计', 'SolidWorks', '废物管理']
     },
     {
         title: '经济型台锯',
         concept: '设计并制造了一台多功能家用木工台锯。',
         impact: '在有限的预算内成功完成了项目，符合工具可及性和实用性的可持续发展目标。',
-        imageUrl: 'https://i.imgur.com/LilPdPA.jpeg',
+        imageUrl: 'https://i.imgur.com/LilPdPA.jpeg?v=1.1',
         technologies: ['木工', '机械设计', '制造']
     },
     {
         title: '毕业设计：苹果削皮生产线',
         concept: '构思并设计了一台工业级苹果削皮机及整条生产线。',
         keyFeatures: ['集成了用于故障预测的运动动画。', '对市场上的苹果加工产品提出了改进。', '为清晰理解，包含了生产线动画。'],
-        imageUrl: 'https://i.imgur.com/qaNv0Xw.png',
+        imageUrl: 'https://i.imgur.com/qaNv0Xw.png?v=1.1',
         technologies: ['SolidWorks', '运动动画', '生产线设计', 'Python']
     },
     {
@@ -195,7 +195,7 @@ export const academicProjectsData: Project[] = [
         concept: '基于前臂锻炼机的原理，设计并制造了一种发电装置。',
         process: '确定了发电的最佳尺寸，选择了优质组件进行组装，并研究了影响功率输出的关键参数。',
         methodology: '使用SOLIDWORKS软件对整个原型进行建模，并制造了一个功能性原型进行实验验证。',
-        imageUrl: 'https://i.imgur.com/V8v4Ayp.png',
+        imageUrl: 'https://i.imgur.com/V8v4Ayp.png?v=1.1',
         technologies: ['SolidWorks', '原型制作', '发电', '机械设计']
     }
 ];
@@ -215,9 +215,9 @@ export const developmentData: DevelopmentItem[] = [
 ];
 
 export const educationData: EducationItem[] = [
-    { degree: "机械工程学士学位", institution: "UCSI大学", period: "2017-2021", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
-    { degree: "理科预科", institution: "UCSI大学", period: "2016-2017", imageUrl: "https://i.imgur.com/nqKMg1J.png" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://i.imgur.com/fz1P118.png" }
+    { degree: "机械工程学士学位", institution: "UCSI大学", period: "2017-2021", imageUrl: "https://i.imgur.com/nqKMg1J.png?v=1.1" },
+    { degree: "理科预科", institution: "UCSI大学", period: "2016-2017", imageUrl: "https://i.imgur.com/nqKMg1J.png?v=1.1" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://i.imgur.com/fz1P118.png?v=1.1" }
 ];
 
 export const references = {

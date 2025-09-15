@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import type { Experience, Role } from '../types';
 import { ChevronDown } from './Icons';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useEdit } from '../contexts/EditContext';
-import { EditableText, EditableImage } from './Editable';
 
 interface RoleItemProps {
     role: Role;
-    path: string;
 }
 
-const RoleItem: React.FC<RoleItemProps> = ({ role, path }) => {
+const RoleItem: React.FC<RoleItemProps> = ({ role }) => {
     const [isOpen, setIsOpen] = useState(false);
     const hasDetails = role.details && role.details.length > 0;
     const { t } = useLanguage();
@@ -20,17 +17,17 @@ const RoleItem: React.FC<RoleItemProps> = ({ role, path }) => {
              <div className="absolute -left-[9px] top-1.5 w-4 h-4 bg-l_accent dark:bg-accent rounded-full border-4 border-l_secondary dark:border-secondary"></div>
              <div className="flex items-center flex-wrap mb-1">
                 <h4 className="font-bold text-l_light dark:text-light mr-3">
-                    <EditableText path={`${path}.title`}>{role.title}</EditableText>
+                    {role.title}
                 </h4>
                 {role.type === 'Internship' && (
                     <span className="bg-l_accent/20 dark:bg-accent/20 text-l_accent dark:text-accent text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                        <EditableText path="roleTypes.internship">{t.roleTypes.internship}</EditableText>
+                        {t.roleTypes.internship}
                     </span>
                 )}
              </div>
              <div className="flex items-center">
                 <p className="text-sm text-l_accent dark:text-accent">
-                    <EditableText path={`${path}.period`}>{role.period}</EditableText>
+                    {role.period}
                 </p>
                 {hasDetails && (
                     <button onClick={() => setIsOpen(!isOpen)} className="ml-4 text-l_accent dark:text-accent" aria-expanded={isOpen} aria-label="Toggle details">
@@ -43,7 +40,7 @@ const RoleItem: React.FC<RoleItemProps> = ({ role, path }) => {
                      <ul className="list-disc list-inside text-l_dark dark:text-dark space-y-2 mt-4">
                         {role.details.map((detail, index) => (
                             <li key={index}>
-                                <EditableText path={`${path}.details.${index}`}>{detail}</EditableText>
+                                {detail}
                             </li>
                         ))}
                     </ul>
@@ -55,23 +52,22 @@ const RoleItem: React.FC<RoleItemProps> = ({ role, path }) => {
 
 interface ExperienceCardProps {
   experience: Experience;
-  path: string;
 }
 
-export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, path }) => {
+export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div className="bg-l_secondary dark:bg-secondary p-8 rounded-lg shadow-lg">
       <div className="flex items-center mb-6">
         <div className="w-20 h-16 mr-6 bg-l_primary dark:bg-primary rounded-md p-2 flex items-center justify-center flex-shrink-0">
-            <EditableImage path={`${path}.logoUrl`} alt={`${experience.company} logo`} className="max-w-full max-h-full object-contain" />
+            <img src={experience.logoUrl} alt={`${experience.company} logo`} className="max-w-full max-h-full object-contain" />
         </div>
         <h3 className="text-2xl font-bold text-l_accent dark:text-accent">
-            <EditableText path={`${path}.company`}>{experience.company}</EditableText>
+            {experience.company}
         </h3>
       </div>
       <div>
         {experience.roles.map((role, index) => (
-          <RoleItem key={index} role={role} path={`${path}.roles.${index}`} />
+          <RoleItem key={index} role={role} />
         ))}
       </div>
     </div>
