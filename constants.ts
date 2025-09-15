@@ -164,10 +164,11 @@ export const developmentData: DevelopmentItem[] = [
     { category: 'Additional Achievement', item: 'TRUST SCHOLARSHIP HOLDER FROM 2016 TO 2022 (UCSI)' }
 ];
 
+// FIX: Added 'imageUrl' property to each object to satisfy the EducationItem type.
 export const educationData: EducationItem[] = [
-    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", details: "CGPA: 3.48" },
-    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", details: "CGPA: 3.64" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", details: "Result: 5A 2A-3B+" }
+    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", details: "CGPA: 3.48", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
+    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", details: "CGPA: 3.64", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", details: "Result: 5A 2A-3B+", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDPtUNS1fvcWxQZbwJxYZOU1VrZEbdjTcvg&s" }
 ];
 
 export const navLinks = [

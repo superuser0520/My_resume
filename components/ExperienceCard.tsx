@@ -16,8 +16,8 @@ const RoleItem: React.FC<RoleItemProps> = ({ role, path }) => {
     const { t } = useLanguage();
 
     return (
-        <div className="border-l-2 border-slate-300 dark:border-slate-700 pl-6 pb-6 relative">
-             <div className="absolute -left-[10px] top-1.5 w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full border-4 border-l_secondary dark:border-secondary"></div>
+        <div className="border-l-2 border-slate-200 dark:border-slate-800 pl-6 pb-6 relative">
+             <div className="absolute -left-[9px] top-1.5 w-4 h-4 bg-l_accent dark:bg-accent rounded-full border-4 border-l_secondary dark:border-secondary"></div>
              <div className="flex items-center flex-wrap mb-1">
                 <h4 className="font-bold text-l_light dark:text-light mr-3">
                     <EditableText path={`${path}.title`}>{role.title}</EditableText>

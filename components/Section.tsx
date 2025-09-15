@@ -38,14 +38,13 @@ export const Section: React.FC<SectionProps> = ({ id, title, children, className
     };
   }, []);
 
+  const animationClasses = isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10';
 
   return (
     <section 
         id={id} 
         ref={sectionRef}
-        className={`py-16 md:py-24 scroll-m-20 transition-all duration-1000 ease-out ${className} ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
+        className={`py-16 md:py-24 scroll-m-20 transition-all duration-1000 ease-out ${className} ${animationClasses}`}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center text-l_light dark:text-light mb-12">
         {title}

@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
-        <section id="about" className="min-h-screen flex items-center justify-center scroll-m-20">
+        <section id="about" className="min-h-screen flex items-center justify-center scroll-m-20 py-24 sm:py-32 lg:py-40">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
                 <div className="lg:col-span-3">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-l_light dark:text-light mb-4 leading-tight">
@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
                     </div>
                 </div>
                 <div className="lg:col-span-2 flex justify-center lg:justify-end">
-                    <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-l_accent/30 dark:border-accent/50">
+                    <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-l_accent/30 dark:border-accent/50">
                         <img 
                             src="https://picsum.photos/seed/portrait/400/400" 
                             alt="Soo Lih Jing" 

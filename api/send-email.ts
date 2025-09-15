@@ -7,7 +7,7 @@ export default async function handler(request, response) {
     return response.status(405).end(`Method ${request.method} Not Allowed`);
   }
 
-  const { name, email, message } = request.body;
+  const { name, email, message, attachment } = request.body;
 
   // Basic validation
   if (!name || !email || !message) {
@@ -28,7 +28,7 @@ export default async function handler(request, response) {
   // The 'from' address must be 'onboarding@resend.dev' for the free tier unless you have a custom domain verified with Resend.
   const fromEmail = 'Portfolio Form <onboarding@resend.dev>';
 
-  const emailPayload = {
+  const emailPayload: any = {
     from: fromEmail,
     to: [toEmail],
     subject: `New Portfolio Message from ${name}`,
@@ -44,6 +44,15 @@ export default async function handler(request, response) {
     `,
     reply_to: email,
   };
+
+  if (attachment && attachment.content && attachment.filename) {
+      emailPayload.attachments = [
+          {
+              filename: attachment.filename,
+              content: attachment.content, // content should be base64
+          },
+      ];
+  }
 
   try {
     // Send the email using the Resend API

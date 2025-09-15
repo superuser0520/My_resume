@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
   );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-l_secondary dark:bg-secondary shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-l_secondary/80 dark:bg-secondary/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
       <nav className="container mx-auto px-6 md:px-12 lg:px-24 py-4 flex justify-between items-center">
         <a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="text-xl font-bold text-l_accent dark:text-accent transition-colors hover:opacity-80">
           Soo Lih Jing

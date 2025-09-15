@@ -69,7 +69,7 @@ const App: React.FC = () => {
     return (
         <div className="bg-l_primary dark:bg-primary min-h-screen font-sans">
             <Header activeSection={activeSection} />
-            <main className="container mx-auto px-6 md:px-12 lg:px-24 pt-20">
+            <main className="container max-w-6xl mx-auto px-6 md:px-12 pt-20">
                 <Hero />
                 <Skills />
                 <Experience />

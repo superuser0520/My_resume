@@ -42,5 +42,7 @@ export interface EducationItem {
     degree: string;
     institution: string;
     period: string;
-    details: string;
+    imageUrl: string;
+    // FIX: Added optional details property to allow for additional info like CGPA.
+    details?: string;
 }

@@ -13,8 +13,8 @@ export const navLinks = [
 ];
 
 export const hero = {
-    title: "Innovating Solutions Through Precision Engineering & Automation",
-    subtitle: "As a Mechanical Designer and Automation Engineer with a deep-rooted passion for mechanics cultivated since the age of 12, I thrive on transforming complex challenges into efficient, innovative solutions. My expertise spans research, project fabrication, and the implementation of advanced automation systems. I am driven by a continuous desire for knowledge and a commitment to pushing technological boundaries to achieve exceptional results. I believe that \"Success is not final; failure is not fatal,\" and I consistently embrace new challenges to elevate my capabilities and deliver impactful engineering solutions.",
+    title: "Precision Engineering & Automation Innovator",
+    subtitle: "A Mechanical Designer and Automation Engineer with a lifelong passion for mechanics. I specialize in transforming complex industrial challenges into efficient, intelligent solutions. My expertise lies in designing advanced automation systems, leading projects from concept to completion, and pushing technological boundaries to drive productivity and safety.",
     button: "View My Work",
     resumeButton: "Download CV"
 };
@@ -28,7 +28,7 @@ export const sectionTitles = {
     education: "Educational Background",
     references: "Professional Reference",
     contact: "Get In Touch",
-    game: "Recruiter's Challenge: Catch the Gears!"
+    game: "Recruiter's Arcade"
 };
 
 export const skillsData: Skill[] = [
@@ -38,7 +38,7 @@ export const skillsData: Skill[] = [
     { name: 'Microsoft Office', level: 9, description: 'Expert in using Microsoft Office Suite for data analysis, reporting, and project documentation.', tooltip: 'Advanced proficiency in Excel for data analysis (PivotTables, VLOOKUP), PowerPoint for presentations, and Word for technical documentation.' },
     { name: 'Project Management Skill', level: 9, description: 'Proven ability to manage projects from conceptualization to completion, including budgeting, scheduling, and team coordination.', tooltip: 'Utilizing tools like Gantt charts, critical path analysis, and Agile methodologies to ensure projects are delivered on time and within budget.' },
     { name: '6 Sigma Lean Manufacturing Skill', level: 9, description: 'Applied Lean Six Sigma principles to optimize manufacturing processes, reduce waste, and improve efficiency and quality.', tooltip: 'Certified Greenbelt with practical experience in DMAIC, value stream mapping, 5S, and Kaizen events to drive continuous improvement.' },
-    { name: 'Vibe Coding', level: 8, description: 'Applied prompt engineering to develop tools and applications for engineering purposes, enhancing efficiency and problem-solving through AI-driven solutions.', tooltip: 'Specializing in prompt engineering to leverage large language models (LLMs) for tasks like code generation, data analysis scripting, and automating documentation.' }
+    { name: 'Vibe Coding', level: 8, description: 'Leveraging prompt engineering and AI to develop custom tools that enhance engineering efficiency and accelerate problem-solving.', tooltip: 'Using large language models (LLMs) for rapid prototyping, code generation, data analysis scripting, and automating technical documentation.' }
 ];
 
 export const experienceData: Experience[] = [
@@ -62,18 +62,18 @@ export const experienceData: Experience[] = [
                 title: 'AUTOMATION ENGINEER I',
                 period: 'March \'22 - June \'23',
                 details: [
-                    'Led mechanical design for PRESS & FORMING machine automation, including concept drafting, 3D SolidWorks modeling, and 2D drawing annotation.',
-                    'Developed comprehensive project costing, investment, and manpower optimization plans for proposals, successfully securing a SGD 300k project with a 10-month ROI.',
-                    'Provided on-site support for troubleshooting and improvement on PLC Programming (Mitsubishi PLC).',
-                    'Managed project execution and supervised on-site activities, ensuring seamless integration and timely delivery.',
-                    'Facilitated internal and external liaison with departments, vendors, and suppliers for project success.',
-                    'Designed local and overseas cleanroom shopfloor workflows and layouts, optimizing space and material flow.',
-                    'Performed warehouse process throughput and utilization calculations to enhance efficiency.',
-                    'Executed upstream and downstream mechanical designing for conveyor and packaging lines.',
-                    'Pioneered project costing, investment, vendor sourcing, and manpower optimization for proposals, securing a SGD 3 million project with an 8.6-month ROI.',
-                    'Developed system integration plans across ERP, WMS, RMS, and PLC systems.',
-                    'Ensured safety compliance and planned for human-robot collaborative environments.',
-                    'Managed on-site deployment and long-term improvement initiatives for automated guided vehicles.'
+                    'Led mechanical design for press and forming machine automation, from concept and 3D modeling to final 2D drawings.',
+                    'Secured a SGD 300k project with a 10-month ROI by developing comprehensive project proposals including costing, investment, and optimization plans.',
+                    'Provided on-site support for troubleshooting and improving PLC logic (Mitsubishi PLC).',
+                    'Managed project execution and supervised on-site activities to ensure seamless integration and timely delivery.',
+                    'Coordinated with internal departments, vendors, and suppliers to ensure project success.',
+                    'Designed cleanroom shopfloor layouts and workflows for local and overseas sites, optimizing space and material flow.',
+                    'Calculated warehouse process throughput and utilization to identify and implement efficiency improvements.',
+                    'Executed mechanical design for both upstream and downstream conveyor and packaging line equipment.',
+                    'Spearheaded proposal development for a large-scale automation project, securing SGD 3 million in funding with an 8.6-month ROI.',
+                    'Developed system integration plans across ERP, WMS, RMS, and PLC systems for cohesive operation.',
+                    'Ensured safety compliance and planned for human-robot collaborative work environments.',
+                    'Managed on-site deployment and continuous improvement initiatives for automated guided vehicles (AGVs).'
                 ],
                 type: 'Full-time',
             }
@@ -88,7 +88,7 @@ export const experienceData: Experience[] = [
                 period: 'Sept \'21 - Feb \'22',
                 details: [
                     'Provided critical technical support for Post Curing, DI Wash, and Cleanroom Packaging processes.',
-                    'Ensured all rubber products met stringent customer cleanliness requirements (ISO8 Cleanroom compliance).',
+                    'Ensured all rubber products met stringent customer cleanliness requirements (ISO 8 Cleanroom compliance).',
                     'Managed automation projects and spearheaded cost-saving initiatives within the process engineering department.'
                 ],
                 type: 'Full-time',
@@ -103,11 +103,11 @@ export const experienceData: Experience[] = [
                 title: 'PRODUCTION ENGINEER INTERN',
                 period: 'Sept \'20 - Dec \'20',
                 details: [
-                    'Actively assisted in FMCG manufacturing operations within a cleanroom environment.',
-                    'Identified process bottlenecks, understood root causes, and developed innovative solutions for operational improvement.',
-                    'Fully participated in packaging automation projects from initial concept to completion, applying effective time-management skills and engineering knowledge.',
-                    'Monitored and analyzed line process performance metrics to formulate comprehensive improvement plans.',
-                    'Provided solutions to maximize manufacturing process efficiency across various production lines, contributing to food packaging automation & changeover optimization.'
+                    'Assisted in FMCG manufacturing operations within a cleanroom environment.',
+                    'Identified process bottlenecks and developed innovative solutions for operational improvement.',
+                    'Participated in packaging automation projects from concept to completion, applying engineering knowledge and time-management skills.',
+                    'Monitored and analyzed line performance metrics to formulate comprehensive improvement plans.',
+                    'Contributed to food packaging automation and changeover optimization to maximize manufacturing efficiency.'
                 ],
                 type: 'Internship',
             }
@@ -119,40 +119,40 @@ export const workProjectsData: Project[] = [
     {
         title: 'End-to-End Logistic AMR Automation',
         value: '3 mil SGD and above',
-        concept: 'Engineered a comprehensive, fully automated logistics workflow utilizing a fleet of Autonomous Mobile Robots (AMRs) to streamline material transport from warehousing to production lines.',
-        details: 'This large-scale project involved designing the entire supply chain flow, integrating AMRs with existing WMS and ERP systems, and ensuring seamless, gap-free communication between all system layers for maximum efficiency.',
+        concept: 'Engineered a fully automated, end-to-end logistics workflow using a fleet of Autonomous Mobile Robots (AMRs).',
+        details: 'Integrated a fleet of AMRs with existing WMS and ERP systems, architecting a seamless communication network to maximize material transport efficiency from warehouse to production.',
         imageUrl: 'https://picsum.photos/seed/logistics-amr/600/400',
         technologies: ['AMR', 'WMS Integration', 'ERP Integration', 'System Architecture', 'SolidWorks']
     },
     {
         title: 'ASRS & AMR Wireless Integration',
         value: '500k SGD and above',
-        concept: 'Engineered a seamless integration between an Automated Storage and Retrieval System (ASRS) and AMRs for fully autonomous pallet handling.',
-        details: 'Established a robust wireless communication link using Modbus TCP protocol. The system automates the stacking of plastic pallets onto wooden pallets for ASRS storage and the reverse unbinding process for outbound operations, eliminating manual handling.',
+        concept: 'Integrated an Automated Storage and Retrieval System (ASRS) with AMRs for fully autonomous pallet handling.',
+        details: 'Automated pallet handling by establishing a robust Modbus TCP wireless link between ASRS and AMRs, eliminating all manual intervention in pallet stacking and unstacking processes.',
         imageUrl: 'https://picsum.photos/seed/asrs/600/400',
         technologies: ['ASRS', 'AMR', 'Modbus TCP', 'PLC', 'System Integration']
     },
     {
         title: 'Goods-to-Person (GTP) Picking System',
         value: '1 mil SGD and above',
-        concept: 'Implemented an integrated AMR system to create a "shelf-to-person" workflow, drastically minimizing operator travel time in picking operations.',
-        details: 'This GTP system directs AMRs to retrieve and transport entire shelving units to dedicated picking stations, significantly increasing order fulfillment speed, reducing errors, and improving ergonomic conditions for staff.',
+        concept: 'Implemented an integrated AMR system to create a "shelf-to-person" workflow, drastically minimizing operator travel time.',
+        details: 'This GTP system directs AMRs to retrieve and transport entire shelving units to dedicated picking stations, significantly increasing order fulfillment speed and improving workplace ergonomics.',
         imageUrl: 'https://picsum.photos/seed/gtp/600/400',
         technologies: ['Goods-to-Person', 'AMR', 'WMS', 'Ergonomics', 'Logistics Optimization']
     },
     {
         title: 'Production Line AMR Integration',
         value: '300k SGD and above',
-        concept: 'Developed a fully automated production supply flow using AMRs integrated with PLC-controlled machinery to deliver materials directly to assembly stations.',
-        details: 'This project focused heavily on operational safety and efficiency. It involved PLC programming for machine handshaking and implementing robust safety protocols to ensure a safe, collaborative human-robot work environment.',
+        concept: 'Developed an automated production supply flow using AMRs integrated with PLC-controlled machinery.',
+        details: 'This project focused on operational safety and efficiency, involving PLC programming for machine handshaking and implementing robust safety protocols for a collaborative human-robot work environment.',
         imageUrl: 'https://picsum.photos/seed/production-amr/600/400',
         technologies: ['AMR', 'PLC Programming', 'SolidWorks', 'Safety Systems', 'Machine Integration']
     },
     {
         title: 'Automated Wooden Pallet Stocker & Dispenser',
         value: '150k SGD and above',
-        concept: 'Designed and commissioned an automated system for dispensing and collecting wooden pallets, servicing various supply chain operational needs.',
-        details: 'This solution provides on-demand pallet availability for production and logistics, integrating wirelessly with the central AMR fleet management system via Modbus TCP to optimize workflow and reduce idle time.',
+        concept: 'Designed and commissioned an automated system for dispensing and collecting wooden pallets to service supply chain needs.',
+        details: 'This solution provides on-demand pallet availability, integrating wirelessly with the central AMR fleet management system via Modbus TCP to optimize workflow and reduce operational idle time.',
         imageUrl: 'https://picsum.photos/seed/pallet-stocker/600/400',
         technologies: ['Automation', 'Robotics', 'SolidWorks', 'Modbus TCP', 'AMR Integration']
     },
@@ -160,7 +160,7 @@ export const workProjectsData: Project[] = [
         title: 'Automated Pallet Wrapping System',
         value: '100k SGD and above',
         concept: 'Developed an automated pallet wrapping station initiated and serviced entirely by AMRs.',
-        details: 'The system allows an AMR to transport a loaded pallet to the wrapping machine, which automatically initiates the wrapping cycle. Communication is handled wirelessly via Modbus TCP, creating a hands-free final packaging step.',
+        details: 'The system enables an AMR to transport a loaded pallet to the wrapping machine and automatically initiate the cycle. Communication is handled wirelessly via Modbus TCP, creating a hands-free packaging step.',
         imageUrl: 'https://picsum.photos/seed/wrapper/600/400',
         technologies: ['Pallet Wrapping', 'AMR', 'Modbus TCP', 'Automation', 'PLC']
     }
@@ -221,9 +221,9 @@ export const developmentData: DevelopmentItem[] = [
 ];
 
 export const educationData: EducationItem[] = [
-    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", details: "CGPA: 3.48" },
-    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", details: "CGPA: 3.64" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", details: "Result: 5A 2A-3B+" }
+    { degree: "Bachelor's Degree in Mechanical Engineering", institution: "UCSI University", period: "2017-2021", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
+    { degree: "Foundation in Science", institution: "UCSI University", period: "2016-2017", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDPtUNS1fvcWxQZbwJxYZOU1VrZEbdjTcvg&s" }
 ];
 
 export const references = {
@@ -257,13 +257,25 @@ export const contactForm = {
 };
 
 export const game = {
-    challenge: "Ready for a quick break?",
-    goal: (score: number) => `Score ${score} points to complete the challenge!`,
-    start: "Start Game",
-    wonTitle: "Challenge Complete!",
-    wonBody: "You've got great reflexes! I'd love to connect.",
-    playAgain: "Play Again",
-    score: "Score"
+    selectGame: "Select a Challenge",
+    catchGame: {
+        title: "Catch The Parts",
+        description: "Show your reflexes! Catch the falling components to score points.",
+        goal: (score: number) => `Score ${score} points to win!`,
+        start: "Start Game",
+        wonTitle: "Challenge Complete!",
+        wonBody: "You've got great reflexes! I'd love to connect.",
+        playAgain: "Play Again",
+    },
+    snakeEaterGame: {
+        title: "Snake Eater",
+        description: "A classic engineering challenge! Guide the snake to eat the components without crashing.",
+        start: "Start Game",
+        gameOverTitle: "Game Over",
+        gameOverBody: "A valiant effort! Precision and planning are key. Ready for another round?",
+        playAgain: "Play Again",
+    },
+    score: "Score",
 };
 
 export const footer = {

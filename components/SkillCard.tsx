@@ -54,7 +54,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ skill, path }) => {
   return (
     <div 
       ref={cardRef}
-      className="group relative bg-l_secondary dark:bg-secondary p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      className="group relative bg-l_secondary dark:bg-secondary p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
     >
       <h3 className="text-xl font-bold text-l_light dark:text-light mb-2">
         <EditableText path={`${path}.name`}>{skill.name}</EditableText>

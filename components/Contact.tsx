@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Section } from './Section';
-import { Mail, Linkedin, SendIcon } from './Icons';
+import { Mail, Linkedin, SendIcon, FileIcon } from './Icons';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useEdit } from '../contexts/EditContext';
 import { EditableText } from './Editable';
@@ -11,6 +11,8 @@ export const Contact: React.FC = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [errors, setErrors] = useState({ name: '', email: '', message: '' });
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+    const [file, setFile] = useState<File | null>(null);
+    const [isDragging, setIsDragging] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -45,6 +47,14 @@ export const Contact: React.FC = () => {
         return isValid;
     };
 
+    const fileToBase64 = (file: File): Promise<string> =>
+        new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve((reader.result as string).split(',')[1]);
+            reader.onerror = error => reject(error);
+        });
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (formStatus === 'sending' || !validate()) {
@@ -54,17 +64,26 @@ export const Contact: React.FC = () => {
         setFormStatus('sending');
 
         try {
+            let attachment;
+            if (file) {
+                const content = await fileToBase64(file);
+                attachment = { filename: file.name, content };
+            }
+
+            const payload = { ...formData, attachment };
+            
             const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(payload),
             });
 
             if (response.ok) {
                 setFormStatus('success');
                 setFormData({ name: '', email: '', message: '' });
+                setFile(null);
             } else {
                 setFormStatus('error');
             }
@@ -72,6 +91,34 @@ export const Contact: React.FC = () => {
             console.error('Contact form submission error:', error);
             setFormStatus('error');
         }
+    };
+    
+    const handleDragEnter = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(true);
+    };
+    const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(false);
+    };
+    const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+    };
+    const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(false);
+        if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            setFile(e.dataTransfer.files[0]);
+            e.dataTransfer.clearData();
+        }
+    };
+
+    const removeFile = () => {
+        setFile(null);
     };
 
     return (
@@ -123,17 +170,48 @@ export const Contact: React.FC = () => {
                             <label htmlFor="message" className="block text-l_dark dark:text-dark mb-2 font-medium">
                                 {t.contactForm.messageLabel}
                             </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                rows={5}
-                                placeholder={t.contactForm.messagePlaceholder}
-                                className={`w-full bg-l_primary dark:bg-primary text-l_light dark:text-light px-4 py-2 rounded-md border  focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? 'border-red-500' : 'border-slate-600'}`}
-                                aria-required="true"
-                                aria-invalid={!!errors.message}
-                            ></textarea>
+                            <div
+                                onDragEnter={handleDragEnter}
+                                onDragLeave={handleDragLeave}
+                                onDragOver={handleDragOver}
+                                onDrop={handleDrop}
+                                className={`relative transition-all duration-300 rounded-md ${isDragging ? 'ring-2 ring-l_accent/50 dark:ring-accent/50' : ''}`}
+                            >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    rows={5}
+                                    placeholder={t.contactForm.messagePlaceholder}
+                                    className={`w-full bg-l_primary dark:bg-primary text-l_light dark:text-light px-4 py-2 rounded-md border  focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? 'border-red-500' : 'border-slate-600'}`}
+                                    aria-required="true"
+                                    aria-invalid={!!errors.message}
+                                ></textarea>
+                                {isDragging && (
+                                    <div className="absolute inset-0 flex flex-col justify-center items-center bg-l_secondary/90 dark:bg-secondary/90 rounded-md pointer-events-none border-2 border-dashed border-l_accent dark:border-accent">
+                                        <p className="text-lg font-semibold text-l_accent dark:text-accent">Drop File Here</p>
+                                        <p className="text-sm text-l_dark dark:text-dark">Attach a job description or other file</p>
+                                    </div>
+                                )}
+                            </div>
+                             {file && (
+                                <div className="mt-2 flex items-center justify-between bg-l_primary dark:bg-primary p-2 rounded-md text-sm">
+                                    <div className="flex items-center text-l_light dark:text-light overflow-hidden">
+                                        <FileIcon className="w-5 h-5 mr-2 text-l_accent dark:text-accent flex-shrink-0" />
+                                        <span className="font-semibold truncate">{file.name}</span>
+                                        <span className="text-l_dark dark:text-dark ml-2 flex-shrink-0">({(file.size / 1024).toFixed(1)} KB)</span>
+                                    </div>
+                                    <button
+                                        onClick={removeFile}
+                                        type="button"
+                                        className="text-red-500 hover:text-red-400 font-bold ml-2 p-1 rounded-full flex-shrink-0"
+                                        aria-label="Remove file"
+                                    >
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd"></path></svg>
+                                    </button>
+                                </div>
+                            )}
                             {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                         </div>
                         <div className="text-center">

@@ -13,8 +13,8 @@ export const navLinks = [
 ];
 
 export const hero = {
-    title: "通过精密工程与自动化创新解决方案",
-    subtitle: "作为一名机械设计师和自动化工程师，我从12岁起就对机械充满了深厚的热情。我擅长将复杂的挑战转化为高效、创新的解决方案。我的专业领域涵盖研究、项目制造以及先进自动化系统的实施。我对知识的持续渴望和推动技术边界的承诺驱使我取得卓越的成果。我相信“成功不是终点，失败也非末日”，并始终迎接新挑战，以提升我的能力并交付有影响力的工程解决方案。",
+    title: "精密工程与自动化创新者",
+    subtitle: "作为一名对机械充满终身热情的机械设计师与自动化工程师，我专注于将复杂的工业挑战转化为高效、智能的解决方案。我的专长在于设计先进的自动化系统，领导项目从概念到落地，并不断推动技术边界以提高生产力与安全性。",
     button: "查看我的工作",
     resumeButton: "下载简历"
 };
@@ -28,7 +28,7 @@ export const sectionTitles = {
     education: "教育背景",
     references: "专业推荐",
     contact: "联系我",
-    game: "招聘官挑战：接住齿轮！"
+    game: "招聘官游戏厅"
 };
 
 export const skillsData: Skill[] = [
@@ -38,7 +38,7 @@ export const skillsData: Skill[] = [
     { name: 'Microsoft Office', level: 9, description: '精通使用Microsoft Office套件进行数据分析、报告和项目文档编制。', tooltip: '精通Excel进行数据分析（数据透视表、VLOOKUP）、PowerPoint进行演示以及Word进行技术文档编写。' },
     { name: '项目管理技能', level: 9, description: '具备从概念到完成管理项目的成熟能力，包括预算、排程和团队协调。', tooltip: '利用甘特图、关键路径分析和敏捷方法论等工具，确保项目按时、按预算交付。' },
     { name: '六西格玛精益制造技能', level: 9, description: '应用精益六西格玛原则优化制造流程、减少浪费、提高效率和质量。', tooltip: '获得绿带认证，在DMAIC、价值流图、5S和改善活动方面有实践经验，以推动持续改进。' },
-    { name: 'Vibe 编程', level: 8, description: '应用提示工程为工程目的开发工具和应用程序，通过AI驱动的解决方案提高效率和解决问题的能力。', tooltip: '专注于提示工程，利用大型语言模型（LLM）执行代码生成、数据分析脚本和自动化文档等任务。' }
+    { name: 'Vibe 编程', level: 8, description: '利用提示工程和AI开发定制工具，以提高工程效率并加速问题解决。', tooltip: '使用大型语言模型（LLM）进行快速原型设计、代码生成、数据分析脚本编写和自动化技术文档。' }
 ];
 
 export const experienceData: Experience[] = [
@@ -62,18 +62,18 @@ export const experienceData: Experience[] = [
                 title: '自动化工程师 I',
                 period: '22年3月 - 23年6月',
                 details: [
-                    '领导冲压与成型机自动化的机械设计，包括概念草图、3D SolidWorks建模和2D图纸注释。',
-                    '为提案制定全面的项目成本、投资和人力优化计划，成功获得一个30万新元的项目，投资回报期为10个月。',
-                    '为PLC编程（三菱PLC）提供现场故障排除和改进支持。',
+                    '领导冲压与成型机的机械设计，从概念、3D建模到最终的2D图纸。',
+                    '通过制定包括成本、投资和优化计划在内的综合项目提案，成功获得一个30万新元的项目，投资回报期为10个月。',
+                    '为PLC逻辑（三菱PLC）提供现场故障排除和改进支持。',
                     '管理项目执行并监督现场活动，确保无缝集成和及时交付。',
-                    '促进与部门、供应商和供应商的内外联络，确保项目成功。',
-                    '设计本地和海外洁净室车间工作流程和布局，优化空间和物料流。',
-                    '执行仓库流程吞吐量和利用率计算以提高效率。',
-                    '为传送带和包装线执行上下游机械设计。',
-                    '开创项目成本核算、投资、供应商采购和人力优化提案，获得一个300万新元的项目，投资回报期为8.6个月。',
-                    '开发跨ERP、WMS、RMS和PLC系统的系统集成计划。',
-                    '确保安全合规并规划人机协作环境。',
-                    '管理自动导引车的现场部署和长期改进计划。'
+                    '与内部部门、供应商和供应商协调，确保项目成功。',
+                    '为本地和海外工厂设计洁净室车间布局和工作流程，优化空间和物料流。',
+                    '计算仓库流程吞吐量和利用率，以识别和实施效率改进。',
+                    '为传送带和包装线的上下游设备执行机械设计。',
+                    '牵头一个大型自动化项目的提案开发，获得300万新元资金，投资回报期为8.6个月。',
+                    '为ERP、WMS、RMS和PLC系统制定系统集成计划，以实现协同操作。',
+                    '确保安全合规并规划人机协作工作环境。',
+                    '管理自动导引车（AGV）的现场部署和持续改进计划。'
                 ],
                 type: 'Full-time',
             }
@@ -88,7 +88,7 @@ export const experienceData: Experience[] = [
                 period: '21年9月 - 22年2月',
                 details: [
                     '为后固化、DI清洗和洁净室包装过程提供关键技术支持。',
-                    '确保所有橡胶产品符合严格的客户清洁度要求（符合ISO8洁净室标准）。',
+                    '确保所有橡胶产品符合严格的客户清洁度要求（符合ISO 8洁净室标准）。',
                     '在工艺工程部门内管理自动化项目并发起成本节约计划。'
                 ],
                 type: 'Full-time',
@@ -103,11 +103,11 @@ export const experienceData: Experience[] = [
                 title: '生产工程师实习生',
                 period: '20年9月 - 20年12月',
                 details: [
-                    '在洁净室环境中积极协助快速消费品制造操作。',
-                    '识别流程瓶颈，了解根本原因，并为运营改进开发创新解决方案。',
-                    '从最初概念到完成，全面参与包装自动化项目，应用有效的时间管理技能和工程知识。',
-                    '监控和分析生产线流程性能指标，制定全面的改进计划。',
-                    '为各生产线提供最大化制造流程效率的解决方案，为食品包装自动化和转换优化做出贡献。'
+                    '在洁净室环境中协助快速消费品制造操作。',
+                    '识别流程瓶颈并为运营改进开发创新解决方案。',
+                    '从概念到完成参与包装自动化项目，应用工程知识和时间管理技能。',
+                    '监控和分析生产线性能指标，制定全面的改进计划。',
+                    '为食品包装自动化和转换优化做出贡献，以最大化制造效率。'
                 ],
                 type: 'Internship',
             }
@@ -119,40 +119,40 @@ export const workProjectsData: Project[] = [
     {
         title: '端到端物流AMR自动化',
         value: '300万新元以上',
-        concept: '设计了一个全面的全自动物流工作流程，利用自主移动机器人（AMR）车队简化从仓储到生产线的物料运输。',
-        details: '这个大型项目涉及设计整个供应链流程，将AMR与现有的WMS和ERP系统集成，并确保所有系统层之间的无缝、无间隙通信以实现最高效率。',
+        concept: '利用自主移动机器人（AMR）车队，设计了一个全自动的端到端物流工作流程。',
+        details: '将AMR车队与现有的WMS和ERP系统集成，构建了一个无缝的通信网络，以最大化从仓库到生产的物料运输效率。',
         imageUrl: 'https://picsum.photos/seed/logistics-amr/600/400',
         technologies: ['AMR', 'WMS集成', 'ERP集成', '系统架构', 'SolidWorks']
     },
     {
         title: 'ASRS与AMR无线集成',
         value: '50万新元以上',
-        concept: '为实现全自主托盘处理，设计了自动存储与检索系统（ASRS）和AMR之间的无缝集成。',
-        details: '使用Modbus TCP协议建立了强大的无线通信链接。该系统可自动将塑料托盘堆叠到木制托盘上进行ASRS存储，以及在出库操作时进行反向解绑过程，从而消除了人工搬运。',
+        concept: '集成了自动存储与检索系统（ASRS）与AMR，以实现全自主托盘处理。',
+        details: '通过在ASRS和AMR之间建立稳健的Modbus TCP无线链接，实现了托盘处理的自动化，消除了托盘堆叠和拆解过程中的所有人工干预。',
         imageUrl: 'https://picsum.photos/seed/asrs/600/400',
         technologies: ['ASRS', 'AMR', 'Modbus TCP', 'PLC', '系统集成']
     },
     {
         title: '货到人（GTP）拣选系统',
         value: '100万新元以上',
-        concept: '实施了一个集成的AMR系统，创建了“货架到人”的工作流程，极大地减少了拣选操作中的操作员行走时间。',
-        details: '该GTP系统指挥AMR检索并运输整个货架单元到专用的拣选站，显著提高了订单履行速度，减少了错误，并改善了员工的人体工程学条件。',
+        concept: '实施了一个集成的AMR系统，创建了“货架到人”的工作流程，极大地减少了操作员的行走时间。',
+        details: '该GTP系统指挥AMR检索并将整个货架单元运输到专用的拣选站，显著提高了订单履行速度并改善了工作场所的人体工程学。',
         imageUrl: 'https://picsum.photos/seed/gtp/600/400',
         technologies: ['货到人', 'AMR', 'WMS', '人体工程学', '物流优化']
     },
     {
         title: '生产线AMR集成',
         value: '30万新元以上',
-        concept: '开发了一个使用AMR与PLC控制的机械集成的全自动生产供应流程，将物料直接运送到装配站。',
-        details: '该项目重点关注操作安全和效率。它涉及用于机器握手的PLC编程，并实施强大的安全协议，以确保安全、协作的人机工作环境。',
+        concept: '开发了一个使用AMR与PLC控制的机械集成的自动化生产供应流程。',
+        details: '该项目重点关注操作安全和效率，涉及用于机器握手的PLC编程，并为协作式人机工作环境实施了强大的安全协议。',
         imageUrl: 'https://picsum.photos/seed/production-amr/600/400',
         technologies: ['AMR', 'PLC编程', 'SolidWorks', '安全系统', '机器集成']
     },
     {
         title: '自动化木制托盘堆叠与分配器',
         value: '15万新元以上',
-        concept: '设计并调试了一套用于分配和收集木制托盘的自动化系统，以满足各种供应链运营需求。',
-        details: '该解决方案为生产和物流提供按需托盘，通过Modbus TCP与中央AMR车队管理系统无线集成，以优化工作流程并减少空闲时间。',
+        concept: '设计并调试了一套用于分配和收集木制托盘的自动化系统，以满足供应链需求。',
+        details: '该解决方案提供按需托盘，通过Modbus TCP与中央AMR车队管理系统无线集成，以优化工作流程并减少操作空闲时间。',
         imageUrl: 'https://picsum.photos/seed/pallet-stocker/600/400',
         technologies: ['自动化', '机器人技术', 'SolidWorks', 'Modbus TCP', 'AMR集成']
     },
@@ -160,7 +160,7 @@ export const workProjectsData: Project[] = [
         title: '自动化托盘缠绕系统',
         value: '10万新元以上',
         concept: '开发了一个完全由AMR启动和服务的自动化托盘缠绕站。',
-        details: '该系统允许AMR将装载好的托盘运输到缠绕机，机器在机器人到达后自动启动缠绕周期。通信通过Modbus TCP无线处理，创建了一个无需人工操作的最终包装步骤。',
+        details: '该系统使AMR能够将装载好的托盘运输到缠绕机并自动启动缠绕周期。通信通过Modbus TCP无线处理，创建了一个无需人工操作的包装步骤。',
         imageUrl: 'https://picsum.photos/seed/wrapper/600/400',
         technologies: ['托盘缠绕', 'AMR', 'Modbus TCP', '自动化', 'PLC']
     }
@@ -176,7 +176,7 @@ export const academicProjectsData: Project[] = [
     },
     {
         title: '塑料粉碎机',
-        concept: '开发了一台旨在减少塑料废物体积的塑料粉碎机。',
+        concept: '开发了一台旨在减少塑料废物体積的塑料粉碎机。',
         impact: '通过将较大的塑料物品转化为较小的颗粒状碎片，显著降低了塑料回收的成本。',
         imageUrl: 'https://picsum.photos/seed/shredder/600/400',
         technologies: ['机械设计', 'SolidWorks', '废物管理']
@@ -220,9 +220,9 @@ export const developmentData: DevelopmentItem[] = [
 ];
 
 export const educationData: EducationItem[] = [
-    { degree: "机械工程学士学位", institution: "UCSI大学", period: "2017-2021", details: "CGPA: 3.48" },
-    { degree: "理科预科", institution: "UCSI大学", period: "2016-2017", details: "CGPA: 3.64" },
-    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", details: "成绩: 5A 2A-3B+" }
+    { degree: "机械工程学士学位", institution: "UCSI大学", period: "2017-2021", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
+    { degree: "理科预科", institution: "UCSI大学", period: "2016-2017", imageUrl: "https://cdn.prod.website-files.com/641ae14b3ffc4f10f12ecaff/681b065272fbe162401cbc9d_UCSI%20Logo.png" },
+    { degree: "SPM", institution: "SMK Taman University", period: "2011-2015", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDPtUNS1fvcWxQZbwJxYZOU1VrZEbdjTcvg&s" }
 ];
 
 export const references = {
@@ -255,15 +255,26 @@ export const contactForm = {
     }
 };
 
-
 export const game = {
-    challenge: "准备好休息一下了吗？",
-    goal: (score: number) => `获得 ${score} 分以完成挑战！`,
-    start: "开始游戏",
-    wonTitle: "挑战完成！",
-    wonBody: "你的反应真棒！希望能与您建立联系。",
-    playAgain: "再玩一次",
-    score: "分数"
+    selectGame: "选择一个挑战",
+    catchGame: {
+        title: "接住零件",
+        description: "展示你的反应能力！接住掉落的零件来得分。",
+        goal: (score: number) => `获得 ${score} 分即可获胜！`,
+        start: "开始游戏",
+        wonTitle: "挑战完成！",
+        wonBody: "你的反应真棒！希望能与您建立联系。",
+        playAgain: "再玩一次",
+    },
+    snakeEaterGame: {
+        title: "贪吃蛇",
+        description: "一个经典的工程挑战！引导蛇吃掉零件，但不要撞到自己或墙壁。",
+        start: "开始游戏",
+        gameOverTitle: "游戏结束",
+        gameOverBody: "一次勇敢的尝试！精准和规划是关键。准备好再来一局吗？",
+        playAgain: "再玩一次",
+    },
+    score: "分数",
 };
 
 export const footer = {

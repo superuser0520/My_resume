@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, path
   return (
     <div
       onClick={!isEditing ? onClick : undefined}
-      className="group bg-l_secondary dark:bg-secondary rounded-lg shadow-lg hover:shadow-2xl overflow-hidden cursor-pointer transition-all duration-300 transform hover:-translate-y-2 flex flex-col relative"
+      className="group bg-l_secondary dark:bg-secondary rounded-lg shadow-lg hover:shadow-xl overflow-hidden cursor-pointer transition-all duration-300 transform hover:-translate-y-1 flex flex-col relative"
     >
       {project.value && (
         <div className="absolute top-3 right-3 bg-l_accent dark:bg-accent text-white dark:text-primary text-xs font-bold px-3 py-1 rounded-full z-10">
