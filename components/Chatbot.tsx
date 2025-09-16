@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, FormEvent } from 'react';
-import { GoogleGenAI, Chat } from '@google/genai';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ChatIcon, SendIcon } from './Icons';
 import ReactMarkdown from 'react-markdown';
@@ -15,7 +14,6 @@ export const Chatbot: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>([]);
     const [currentInput, setCurrentInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const [chat, setChat] = useState<Chat | null>(null);
     const { t, lang } = useLanguage();
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -28,23 +26,23 @@ export const Chatbot: React.FC = () => {
     }, [messages, isLoading]);
     
     useEffect(() => {
-        if (!isOpen) return;
+        if (isOpen) {
+            setMessages([{ role: 'model', text: t.chatbot.greeting }]);
+        }
+    }, [isOpen, lang, t.chatbot.greeting]);
 
-        const initializeChat = async () => {
-            try {
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const getSystemInstruction = () => {
+        const knowledge = `
+            Skills: ${JSON.stringify(t.skillsData)}
+            Experience: ${JSON.stringify(t.experienceData)}
+            Work Projects: ${JSON.stringify(t.workProjectsData)}
+            Academic Projects: ${JSON.stringify(t.academicProjectsData)}
+            Development & Achievements: ${JSON.stringify(t.developmentData)}
+            Education: ${JSON.stringify(t.educationData)}
+            Personal Info: ${JSON.stringify(t.personalInfo)}
+        `;
 
-                const knowledge = `
-                    Skills: ${JSON.stringify(t.skillsData)}
-                    Experience: ${JSON.stringify(t.experienceData)}
-                    Work Projects: ${JSON.stringify(t.workProjectsData)}
-                    Academic Projects: ${JSON.stringify(t.academicProjectsData)}
-                    Development & Achievements: ${JSON.stringify(t.developmentData)}
-                    Education: ${JSON.stringify(t.educationData)}
-                    Personal Info: ${JSON.stringify(t.personalInfo)}
-                `;
-
-                const systemInstruction = `You are a highly specialized AI assistant for Soo Lih Jing, a Mechanical Designer and Automation Engineer. Your name is 'SooBot'. You MUST answer all questions from his perspective, using 'I', 'my', and 'me'. Your tone should be professional, confident, and friendly. Your ONLY task is to answer questions about Soo Lih Jing's professional background based *exclusively* on the detailed information provided below. Do not use any external knowledge.
+        return `You are a highly specialized AI assistant for Soo Lih Jing, a Mechanical Designer and Automation Engineer. Your name is 'SooBot'. You MUST answer all questions from his perspective, using 'I', 'my', and 'me'. Your tone should be professional, confident, and friendly. Your ONLY task is to answer questions about Soo Lih Jing's professional background based *exclusively* on the detailed information provided below. Do not use any external knowledge.
 
 **Strict Rules:**
 1.  **First-Person Perspective:** ALWAYS speak as Soo Lih Jing (e.g., "I led the mechanical design...", "My skills include...").
@@ -57,45 +55,50 @@ export const Chatbot: React.FC = () => {
 **[BEGIN KNOWLEDGE BASE]**
 ${knowledge}
 **[END KNOWLEDGE BASE]**`;
-
-                const newChat = ai.chats.create({
-                    model: 'gemini-2.5-flash',
-                    config: {
-                        systemInstruction: systemInstruction,
-                    },
-                });
-                setChat(newChat);
-                setMessages([{ role: 'model', text: t.chatbot.greeting }]);
-            } catch (error) {
-                console.error("Failed to initialize AI Chat:", error);
-                setMessages([{ role: 'model', text: "Sorry, the AI assistant is currently unavailable." }]);
-            }
-        };
-
-        initializeChat();
-
-    }, [isOpen, lang, t]);
+    };
 
     const handleSendMessage = async (e: FormEvent) => {
         e.preventDefault();
-        if (!currentInput.trim() || !chat || isLoading) return;
+        if (!currentInput.trim() || isLoading) return;
 
         const userMessage: Message = { role: 'user', text: currentInput };
-        setMessages(prev => [...prev, userMessage]);
+        const newMessages = [...messages, userMessage];
+        
+        setMessages(newMessages);
         setCurrentInput('');
         setIsLoading(true);
 
         try {
-            const responseStream = await chat.sendMessageStream({ message: currentInput });
+            const response = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    messages: newMessages,
+                    systemInstruction: getSystemInstruction()
+                }),
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`API error: ${response.status} ${errorText}`);
+            }
+
+            const reader = response.body?.getReader();
+            if (!reader) throw new Error("Failed to get response reader");
+            
+            const decoder = new TextDecoder();
             let fullResponse = '';
             setMessages(prev => [...prev, { role: 'model', text: '' }]);
 
-            for await (const chunk of responseStream) {
-                fullResponse += chunk.text;
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                
+                fullResponse += decoder.decode(value, { stream: true });
                 setMessages(prev => {
-                    const newMessages = [...prev];
-                    newMessages[newMessages.length - 1].text = fullResponse;
-                    return newMessages;
+                    const updatedMessages = [...prev];
+                    updatedMessages[updatedMessages.length - 1].text = fullResponse;
+                    return updatedMessages;
                 });
             }
         } catch (error) {
