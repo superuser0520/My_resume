@@ -13,6 +13,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
 import { Game } from './components/Game';
+import { Chatbot } from './components/Chatbot';
 import type { Project } from './types';
 import { useLanguage } from './contexts/LanguageContext';
 import { ArrowUpIcon } from './components/Icons';
@@ -108,13 +109,14 @@ const App: React.FC = () => {
             <button
                 type="button"
                 onClick={scrollTop}
-                className={`fixed bottom-5 right-5 z-50 p-3 rounded-full bg-l_accent dark:bg-accent text-white dark:text-primary shadow-lg hover:bg-opacity-80 dark:hover:opacity-80 transition-all duration-300 transform ${
+                className={`fixed bottom-20 right-5 z-40 p-3 rounded-full bg-l_accent dark:bg-accent text-white dark:text-primary shadow-lg hover:bg-opacity-80 dark:hover:opacity-80 transition-all duration-300 transform ${
                     showScrollToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'
                 }`}
                 aria-label="Scroll to top"
             >
                 <ArrowUpIcon className="w-6 h-6" />
             </button>
+            <Chatbot />
         </div>
     );
 };

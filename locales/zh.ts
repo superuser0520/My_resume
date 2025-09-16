@@ -307,3 +307,16 @@ export const proficiencyLevels = {
 export const roleTypes = {
     internship: '实习'
 };
+
+export const personalInfo = {
+    jobSearchStatus: "我目前正在隨意尋找新的工作機會。",
+    location: "我居住在新加坡。"
+};
+
+export const chatbot = {
+    title: "AI 助手",
+    greeting: "您好！我是 Soo Lih Jing 的 AI 助手。您可以問我任何關於他的技能、經驗或專案的問題。",
+    placeholder: "例如，您有哪些 PLC 經驗？",
+    open: "與我的 AI 聊天",
+    close: "關閉聊天"
+};

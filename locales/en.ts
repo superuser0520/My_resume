@@ -58,7 +58,7 @@ export const experienceData: Experience[] = [
         roles: [
             {
                 title: 'SENIOR AUTOMATION ENGINEER I',
-                period: 'July \'24 - Present',
+                period: 'July \'24 - Today ',
                 details: [],
                 type: 'Full-time',
             },
@@ -307,4 +307,17 @@ export const proficiencyLevels = {
 
 export const roleTypes = {
     internship: 'Internship'
+};
+
+export const personalInfo = {
+    jobSearchStatus: "I am currently casually looking for new job opportunities.",
+    location: "I am residing in Singapore."
+};
+
+export const chatbot = {
+    title: "AI Assistant",
+    greeting: "Hello! I'm an AI assistant for Soo Lih Jing. Ask me anything about his skills, experience, or projects.",
+    placeholder: "e.g., What PLC experience do you have?",
+    open: "Chat with my AI",
+    close: "Close chat"
 };
