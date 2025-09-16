@@ -7,11 +7,11 @@ export default async function handler(request, response) {
     return response.status(405).end(`Method ${request.method} Not Allowed`);
   }
 
-  const { name, email, message, attachment } = request.body;
+  const { name, email, subject, phone, message, attachment } = request.body;
 
   // Basic validation
-  if (!name || !email || !message) {
-    return response.status(400).json({ error: 'All fields are required.' });
+  if (!name || !email || !subject || !message) {
+    return response.status(400).json({ error: 'Name, email, subject, and message are required.' });
   }
 
   // Ensure the API key is available from environment variables
@@ -31,12 +31,13 @@ export default async function handler(request, response) {
   const emailPayload: any = {
     from: fromEmail,
     to: [toEmail],
-    subject: `New Portfolio Message from ${name}`,
+    subject: `New Portfolio Message: ${subject}`,
     html: `
       <div style="font-family: sans-serif; line-height: 1.6;">
         <h2>New Message via Portfolio Contact Form</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
         <hr style="border: none; border-top: 1px solid #eee;" />
         <h3>Message:</h3>
         <p>${message.replace(/\n/g, '<br>')}</p>

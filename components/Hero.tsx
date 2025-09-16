@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
                     </div>
                 </div>
                 <div className="lg:col-span-2 flex justify-center lg:justify-end">
-                    <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-l_accent/30 dark:border-accent/50">
+                    <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-l_accent/30 dark:border-accent/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-l_accent/30 dark:hover:shadow-accent/30">
                         <img 
                             src="https://i.imgur.com/H8aSAiq.jpeg?v=1.1" 
                             alt="Soo Lih Jing" 

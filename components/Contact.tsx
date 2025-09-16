@@ -5,8 +5,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export const Contact: React.FC = () => {
     const { t } = useLanguage();
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [errors, setErrors] = useState({ name: '', email: '', message: '' });
+    const [formData, setFormData] = useState({ name: '', email: '', subject: '', phone: '', message: '' });
+    const [errors, setErrors] = useState({ name: '', email: '', subject: '', phone: '', message: '' });
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
     const [file, setFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -23,7 +23,7 @@ export const Contact: React.FC = () => {
     };
 
     const validate = (): boolean => {
-        const newErrors = { name: '', email: '', message: '' };
+        const newErrors = { name: '', email: '', subject: '', phone: '', message: '' };
         let isValid = true;
         if (!formData.name.trim()) {
             newErrors.name = t.contactForm.validation.nameRequired;
@@ -34,6 +34,10 @@ export const Contact: React.FC = () => {
             isValid = false;
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             newErrors.email = t.contactForm.validation.emailInvalid;
+            isValid = false;
+        }
+        if (!formData.subject.trim()) {
+            newErrors.subject = t.contactForm.validation.subjectRequired;
             isValid = false;
         }
         if (!formData.message.trim()) {
@@ -79,7 +83,7 @@ export const Contact: React.FC = () => {
 
             if (response.ok) {
                 setFormStatus('success');
-                setFormData({ name: '', email: '', message: '' });
+                setFormData({ name: '', email: '', subject: '', phone: '', message: '' });
                 setFile(null);
             } else {
                 setFormStatus('error');
@@ -161,6 +165,39 @@ export const Contact: React.FC = () => {
                                     aria-invalid={!!errors.email}
                                 />
                                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label htmlFor="subject" className="block text-l_dark dark:text-dark mb-2 font-medium">
+                                    {t.contactForm.subjectLabel}
+                                </label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                    placeholder={t.contactForm.subjectPlaceholder}
+                                    className={`w-full bg-l_primary dark:bg-primary text-l_light dark:text-light px-4 py-2 rounded-md border  focus:outline-none focus:ring-2 focus:ring-accent ${errors.subject ? 'border-red-500' : 'border-slate-600'}`}
+                                    aria-required="true"
+                                    aria-invalid={!!errors.subject}
+                                />
+                                {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
+                            </div>
+                             <div>
+                                <label htmlFor="phone" className="block text-l_dark dark:text-dark mb-2 font-medium">
+                                    {t.contactForm.phoneLabel}
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    placeholder={t.contactForm.phonePlaceholder}
+                                    className="w-full bg-l_primary dark:bg-primary text-l_light dark:text-light px-4 py-2 rounded-md border border-slate-600 focus:outline-none focus:ring-2 focus:ring-accent"
+                                />
                             </div>
                         </div>
                         <div className="mb-6">

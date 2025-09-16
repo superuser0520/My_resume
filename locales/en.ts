@@ -7,6 +7,7 @@ export const navLinks = [
     { name: 'Work Projects', href: '#work-projects' },
     { name: 'Academic Projects', href: '#academic-projects' },
     { name: 'Development', href: '#development' },
+    { name: 'AI Tool', href: '#ai-panel-tool' },
     { name: 'Education', href: '#education' },
     { name: 'Game', href: '#game' },
     { name: 'Contact', href: '#contact' },
@@ -25,11 +26,19 @@ export const sectionTitles = {
     workProjects: "Key Work Projects",
     academicProjects: "Academic Innovations",
     development: "Continuous Growth & Recognition",
+    aiPanelTool: "Featured Tool: AI Panel Designer",
     education: "Educational Background",
     references: "Professional Reference",
     contact: "Get In Touch",
     game: "Recruiter's Arcade",
     workProjectsDisclaimer: "Disclaimer: All project images are for illustration purposes only due to company confidentiality."
+};
+
+export const aiPanelTool = {
+  title: "AI-Powered Electrical Panel Design",
+  description: "I developed a cutting-edge tool that leverages AI to design automation electrical panels from simple text prompts. This application streamlines the design process, allowing engineers to generate schematics and layouts with unprecedented speed and efficiency. Explore the future of electrical design.",
+  button: "Launch the AI Designer",
+  imageUrl: "https://i.imgur.com/eRvPS3F.png"
 };
 
 export const skillsData: Skill[] = [
@@ -48,7 +57,7 @@ export const experienceData: Experience[] = [
         logoUrl: 'https://1000logos.net/wp-content/uploads/2020/09/Shimano-Logo.jpg?v=1.1',
         roles: [
             {
-                title: 'Senior Engineer',
+                title: 'SENIOR AUTOMATION ENGINEER I',
                 period: 'July \'24 - Present',
                 details: [],
                 type: 'Full-time',
@@ -236,6 +245,10 @@ export const contactForm = {
     namePlaceholder: "e.g., Jane Doe",
     emailLabel: "Your Email",
     emailPlaceholder: "e.g., jane.doe@example.com",
+    subjectLabel: "Subject",
+    subjectPlaceholder: "e.g., Job Opportunity",
+    phoneLabel: "Phone Number (Optional)",
+    phonePlaceholder: "e.g., +1 123-456-7890",
     messageLabel: "Your Message",
     messagePlaceholder: "Hi Soo, I'd like to connect regarding...",
     sendButton: "Send Message",
@@ -247,6 +260,7 @@ export const contactForm = {
         nameRequired: "Name is required.",
         emailRequired: "Email is required.",
         emailInvalid: "Please enter a valid email address.",
+        subjectRequired: "Subject is required.",
         messageRequired: "Message is required.",
     }
 };

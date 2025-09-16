@@ -7,6 +7,7 @@ export const navLinks = [
     { name: '工作项目', href: '#work-projects' },
     { name: '学术项目', href: '#academic-projects' },
     { name: '职业发展', href: '#development' },
+    { name: 'AI 工具', href: '#ai-panel-tool' },
     { name: '教育背景', href: '#education' },
     { name: '游戏', href: '#game' },
     { name: '联系方式', href: '#contact' },
@@ -25,11 +26,19 @@ export const sectionTitles = {
     workProjects: "主要工作项目",
     academicProjects: "学术创新",
     development: "持续成长与认可",
+    aiPanelTool: "精选工具：AI 面板设计师",
     education: "教育背景",
     references: "专业推荐",
     contact: "联系我",
     game: "招聘官游戏厅",
     workProjectsDisclaimer: "免责声明：由于公司保密原因，所有项目图片仅供参考。"
+};
+
+export const aiPanelTool = {
+  title: "人工智能电气面板设计",
+  description: "我开发了一款前沿工具，利用人工智能通过简单的文本提示来设计自动化电气面板。该应用程序简化了设计流程，使工程师能够以前所未有的速度和效率生成原理图和布局。探索电气设计的未来。",
+  button: "启动 AI 设计器",
+  imageUrl: "https://i.imgur.com/eRvPS3F.png"
 };
 
 export const skillsData: Skill[] = [
@@ -48,7 +57,7 @@ export const experienceData: Experience[] = [
         logoUrl: 'https://1000logos.net/wp-content/uploads/2020/09/Shimano-Logo.jpg?v=1.1',
         roles: [
             {
-                title: '高级工程师',
+                title: '高级自动化工程师 I',
                 period: '24年7月 - 至今',
                 details: [],
                 type: 'Full-time',
@@ -235,6 +244,10 @@ export const contactForm = {
     namePlaceholder: "例如, 张三",
     emailLabel: "您的电子邮件",
     emailPlaceholder: "例如, zhang.san@example.com",
+    subjectLabel: "主题",
+    subjectPlaceholder: "例如, 工作机会",
+    phoneLabel: "电话号码 (可选)",
+    phonePlaceholder: "例如, +86 123-4567-8901",
     messageLabel: "您的留言",
     messagePlaceholder: "您好，我想就...与您联系",
     sendButton: "发送消息",
@@ -246,6 +259,7 @@ export const contactForm = {
         nameRequired: "姓名为必填项。",
         emailRequired: "电子邮件为必填项。",
         emailInvalid: "请输入有效的电子邮件地址。",
+        subjectRequired: "主题为必填项。",
         messageRequired: "留言为必填项。",
     }
 };
